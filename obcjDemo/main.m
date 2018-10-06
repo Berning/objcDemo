@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "bnManager.h"
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+    
+        [[bnManager new] test];
+        
     }
     return 0;
 }
