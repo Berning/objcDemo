@@ -4,10 +4,15 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>coreData copy.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>coreData.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 		<key>obcjDemo.xcscheme</key>
 		<dict>
@@ -19,14 +24,19 @@
 			<key>isShown</key>
 			<true/>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
 		</dict>
 		<key>ratainCycle.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<true/>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>1</integer>
+		</dict>
+		<key>runtime.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -47,6 +57,16 @@
 			<true/>
 		</dict>
 		<key>0B47BC952169333400330C52</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0BCFB2AE216A055B0046BB73</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0BCFB2CB216A0A7B0046BB73</key>
 		<dict>
 			<key>primary</key>
 			<true/>

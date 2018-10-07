@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+
+@protocol BNDogDeletate <NSObject>
+
+@end
+
 @class BNBall;
 
 @interface BNDog : NSObject<NSCoding>
@@ -23,7 +27,7 @@
 
 @property(nonatomic,copy)NSString *dogType;
 
-@property(nonatomic,weak)UIColor *dogColor;
+@property(nonatomic,weak)NSString *dogColor;
 
 @property(nonatomic,assign,getter=isRipped)BOOL ripe;
 

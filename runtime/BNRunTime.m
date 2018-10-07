@@ -20,7 +20,7 @@
 
 @implementation BNRunTime
 
-+(void)runTimeExecute
++(void)rtRunTimeExecute
 {
     [self runTimeMsgSend];
 }
@@ -32,7 +32,7 @@
     BNDog *dog=[BNDog new];
     setDogType= (void(*)(id,SEL,BOOL))[dog methodForSelector:@selector(setDogType:)];
     
-    for (int i=0; i<1000; i++) {
+    for (int i=0; i<10; i++) {
 //        setDogType(dog,@selector(setDogType:),YES);
         NSLog(@"%p",setDogType);
     }
@@ -55,7 +55,7 @@
 
 
 
-+(void)methodSwizzling
++(void)rtMethodSwizzling
 {
 //    BNDog *dog=[BNDog new];
 //    [dog run];
@@ -69,18 +69,18 @@
 
 
 
-+(void)addProperty
++(void)rtAddProperty
 {
     NSMutableArray *arr=[NSMutableArray array];
     
     arr.dog=@"旺财";
     arr.height=190;
-    NSLog(@"%f\n%@",arr.height,arr.dog);
+    NSLog(@"%f--%@",arr.height,arr.dog);
 }
 
 
 
-+(void)enumarateClassIvars
++(void)rtEnumarateClassIvars
 {
     unsigned int count=0;
     Ivar *ivars= class_copyIvarList([BNDog class], &count);
@@ -88,48 +88,63 @@
     for (int i=0; i<count; i++) {
 //        const char *name= ivar_getName(*(ivars+i));
         const char *name= ivar_getName(ivars[i]);
-
-        NSLog(@"%s",name);
+        const char *type=ivar_getTypeEncoding(ivars[i]);
+        NSLog(@"%s ----%s",name,type);
     }
 
     free(ivars);
     
 }
 
-+(void)enumarateClassProperties
++(void)rtEnumarateClassProperties
 {
     unsigned int count=0;
-    objc_property_t *properties= class_copyPropertyList([BNDog class],&count);
+    objc_property_t *properties= class_copyPropertyList([NSArray class],&count);
     for (int i=0; i<count; i++) {
         //        const char *name= ivar_getName(*(ivars+i));
         const char *name= property_getName(properties[i]);
         const char *attr= property_getAttributes(properties[i]);
         
         
-        NSLog(@"%s\n%s",name,attr);
+        NSLog(@"%s---%s",name,attr);
     }
     free(properties);
 }
 
 
-+(void)enumarateClassMethods
++(void)rtEnumarateClassMethods
 {
     unsigned int count=0;
     Method *methods= class_copyMethodList([BNDog class], &count);
     for (int i=0; i<count; i++) {
         SEL name= method_getName(methods[i]);
         
-        NSLog(@"%@\n",NSStringFromSelector(name));
+        NSLog(@"%@",NSStringFromSelector(name));
     }
-    
+
     free(methods);
 
+}
+
++(void)rtEnumarateClassProtocols
+{
+    unsigned int count=0;
+
+    Protocol *__unsafe_unretained *protocols= class_copyProtocolList([BNDog class], &count);
+    
+    for(int i=0;i<count;i++)
+    {
+        //遵循了哪些协议
+        const char *protocol= protocol_getName(protocols[i]);
+        NSLog(@"%s",protocol);
+    }
+    
 }
 
 
 
 
-+(void)keyValuesTest
++(void)rtKeyValuesTest
 {
     NSMutableDictionary *dict=[NSMutableDictionary dictionary];
     
@@ -179,19 +194,19 @@
 }
 
 
-+(void)methodForwardingTest
++(void)rtMethodForwardingTest
 {
     BNBall *ball=[BNBall new];
     id something=[ball performSelector:@selector(eat)];
 
     NSString *num=[ball performSelector:@selector(compute)];
-    NSLog(@"result:%@\neat:%@",num,something);
+    NSLog(@"result:%@--eat:%@",num,something);
     
     NSLog(@"%@",NSStringFromSelector(_cmd));
-    NSLog(@"%d",__LINE__);
     NSLog(@"%s",__FILE__);
     NSLog(@"%@",[@__FILE__ lastPathComponent]);
-    
+    NSLog(@"%d",__LINE__);
+
 
 }
 
