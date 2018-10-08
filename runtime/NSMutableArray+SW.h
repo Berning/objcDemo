@@ -8,12 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSMutableArray (BN)
+@interface NSMutableArray (SW)
 
--(void)bn_AddObject:(id)object;
-
-@property(nonatomic,copy)NSString *dog;
-
-@property (nonatomic, assign) double height;
 
 @end

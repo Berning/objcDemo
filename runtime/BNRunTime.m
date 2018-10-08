@@ -10,8 +10,8 @@
 #import <objc/runtime.h>
 
 #import "MJExtension.h"
-#import "NSObject+keyValues.h"
-#import "NSMutableArray+BN.h"
+//#import "NSMutableArray+SW.h"
+#import "NSMutableArray+properties.h"
 
 #import "BNPerson.h"
 #import "BNDog.h"
@@ -57,17 +57,14 @@
 
 +(void)rtMethodSwizzling
 {
-//    BNDog *dog=[BNDog new];
-//    [dog run];
-//    [dog walk];
-    
     NSMutableArray *arr=[NSMutableArray array];
-    [arr addObject:@"add"];
-    [arr bn_AddObject:@"bnadd"];
+    [arr addObject:@"obj1"];
+    [arr addObject:nil];
+    
     NSLog(@"%@",arr);
 }
 
-
+#pragma  mark add property
 
 +(void)rtAddProperty
 {
@@ -115,7 +112,7 @@
 +(void)rtEnumarateClassMethods
 {
     unsigned int count=0;
-    Method *methods= class_copyMethodList([BNDog class], &count);
+    Method *methods= class_copyMethodList([NSObject class], &count);
     for (int i=0; i<count; i++) {
         SEL name= method_getName(methods[i]);
         

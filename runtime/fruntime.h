@@ -101,15 +101,11 @@ objc_property_t _Nullable class_getProperty(Class _Nullable cls, const char * _N
 objc_property_t _Nonnull * _Nullable class_copyPropertyList(Class _Nullable cls, unsigned int * _Nullable outCount)
 const uint8_t * _Nullable class_getIvarLayout(Class _Nullable cls)
 const uint8_t * _Nullable class_getWeakIvarLayout(Class _Nullable cls)
-BOOL class_addMethod(Class _Nullable cls, SEL _Nonnull name, IMP _Nonnull imp,
-                const char * _Nullable types)
-IMP _Nullable class_replaceMethod(Class _Nullable cls, SEL _Nonnull name, IMP _Nonnull imp,
-                    const char * _Nullable types)
-BOOL class_addIvar(Class _Nullable cls, const char * _Nonnull name, size_t size,
-              uint8_t alignment, const char * _Nullable types)
+BOOL class_addMethod(Class _Nullable cls, SEL _Nonnull name, IMP _Nonnull imp,const char * _Nullable types)
+IMP _Nullable class_replaceMethod(Class _Nullable cls, SEL _Nonnull name, IMP _Nonnull imp,const char * _Nullable types)
+BOOL class_addIvar(Class _Nullable cls, const char * _Nonnull name, size_t size,uint8_t alignment, const char * _Nullable types)
 BOOL class_addProtocol(Class _Nullable cls, Protocol * _Nonnull protocol)
-BOOL class_addProperty(Class _Nullable cls, const char * _Nonnull name,
-                  const objc_property_attribute_t * _Nullable attributes,
+BOOL class_addProperty(Class _Nullable cls, const char * _Nonnull name,const objc_property_attribute_t * _Nullable attributes,
                   unsigned int attributeCount)
 void class_replaceProperty(Class _Nullable cls, const char * _Nonnull name,
                       const objc_property_attribute_t * _Nullable attributes,

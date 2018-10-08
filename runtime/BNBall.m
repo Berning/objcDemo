@@ -26,6 +26,8 @@
 //    }
 //    return [super resolveInstanceMethod:sel];
 //}
+
+
 //向返回的 目标寻找方法
 -(id)forwardingTargetForSelector:(SEL)aSelector
 {
@@ -37,7 +39,7 @@
     {
         return [BNPerson person];
     }
-    return self;
+    return [super forwardingTargetForSelector:aSelector];
 }
 
 
