@@ -183,12 +183,8 @@
     
     BNPerson *person=[BNPerson mj_objectWithKeyValues:dict];
     
-    NSLog(@"%@",person.name);
-    NSLog(@"%@",person.dog.name);
-    NSLog(@"%@",person.dog.ball.ballName);
-    NSLog(@"%@",person.books);
-
-}
+    NSLog(@"%@",person.mj_keyValues);
+    }
 
 
 +(void)rtMethodForwardingTest

@@ -32,26 +32,17 @@
     2.响应体：服务器返回给客户端的具体数据，比如文件数据
  */
 
-
-@class BNPerson ;
 @interface BNHttp : NSObject
 
-//序列化，反序列化
-+(id)serializationExecution:(id)obj;
-
-+(void)afnExetion;
-+(void)deviceDidConnectedNetworking:(void (^)(AFNetworkReachabilityStatus))block;
-
+@property(class,readonly)void test;
 
 @end
 
 
 @interface BNKeyValue : NSObject
 
-+(BNPerson *)keyValues;
 
-
-+(id )objectWithKeyValues;
+@property(class,readonly)void test;
 
 
 @end

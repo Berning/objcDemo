@@ -13,9 +13,9 @@
 
 +(void)test
 {
-    [self storeForPlist];
+//    [self storeForPlist];
 //    [self storeForPreference];
-//    [self storeForArchiver];
+    [self storeForArchiver];
 }
 
 
@@ -85,8 +85,8 @@
     BNPerson *p=[BNPerson person];
     p.name=@"wbn";
     p.age=12;
-    [NSKeyedArchiver archiveRootObject:p toFile:filePath];
     
+    [NSKeyedArchiver  archiveRootObject:p toFile:filePath];
     BNPerson *getP=[NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
     NSLog(@"p:%@,%d", getP.name,getP.age);
     

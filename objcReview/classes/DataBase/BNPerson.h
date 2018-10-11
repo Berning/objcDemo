@@ -18,6 +18,7 @@ static NSString *const kAge=@"kAge";
 
 @interface BNPerson : NSObject<NSCoding>
 
+//for http
 @property(nonatomic,copy)NSString *name;
 @property(nonatomic,copy)NSString *tclass;
 @property(nonatomic,copy)NSString *gf;

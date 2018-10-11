@@ -11,7 +11,7 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        [BNRunTime rtMethodSwizzling];
+        [BNRunTime rtKeyValuesTest];
     }
     return 0;
 }

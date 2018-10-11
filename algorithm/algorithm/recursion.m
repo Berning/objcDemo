@@ -76,15 +76,15 @@ long Fib(int n)
 
 
 //360面试
--(void)printViews:(UIView *)view
-{
-    //      NSArray *viewArray=[view subviews];
-    for (id childView in [view subviews]) {
-        NSLog(@"%@",childView);
-        if ([[childView subviews] count]!=0) {
-            [self printViews:childView];
-        }
-    }
-}
+//-(void)printViews:(UIView *)view
+//{
+//    //      NSArray *viewArray=[view subviews];
+//    for (id childView in [view subviews]) {
+//        NSLog(@"%@",childView);
+//        if ([[childView subviews] count]!=0) {
+//            [self printViews:childView];
+//        }
+//    }
+//}
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 typedef void (^selectCell) (NSIndexPath *indexPath);
 
 

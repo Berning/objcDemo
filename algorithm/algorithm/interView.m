@@ -16,15 +16,15 @@
 // 洗牌 
 void shuffle(int *a ,int n)
 {
-    ePrint(a, n);
-    
     for (int i=n-1; i>=1; i--) {
         
         swap(&a[i], &a[arc4random_uniform(i)]);
         
     }
+    
     ePrint(a, n);
-    eLine
+    ePrintName
+
 }
 
 
@@ -103,7 +103,7 @@ float sqrtByBisection(float n) //”√∂˛∑÷∑®
         return n;
     float mid,last;
     float low,up;
-    low=0,up=n;
+    (void)(low=0),up=n;
     mid=(low+up)/2;
     do
     {
@@ -145,24 +145,26 @@ void testCharacteristics()
         d=sqrtf(99);
     clock_t end4=clock();
     clock_t intervalSqrt=end4-start4;
-    ePrintf(a,intervalNewton)
-    ePrintf(b,intervalBisection)
-    ePrintf(c,intervalCarmack)
-    ePrintf(d,intervalSqrt)
+   
+    printf("%f--%ld---Newton\n",a,intervalNewton);
+    printf("%f--%ld---Bisection\n",b,intervalBisection);
+    printf("%f--%ld---Carmack\n",c,intervalCarmack);
+    printf("%f--%ld---Sqrt\n",d,intervalSqrt);
+
 
 }
 
 //360面试
--(void)printViews:(UIView *)view
-{
-    //      NSArray *viewArray=[view subviews];
-    for (UIView *childView in [view subviews]) {
-        NSLog(@"%@",childView);
-        if ([[childView subviews] count]!=0) {
-            [self printViews:childView];
-        }
-    }
-}
+//-(void)printViews:(UIView *)view
+//{
+//    //      NSArray *viewArray=[view subviews];
+//    for (UIView *childView in [view subviews]) {
+//        NSLog(@"%@",childView);
+//        if ([[childView subviews] count]!=0) {
+//            [self printViews:childView];
+//        }
+//    }
+//}
 
 
 @end

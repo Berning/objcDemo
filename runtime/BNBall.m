@@ -16,8 +16,11 @@
 
 @implementation BNBall
 
-
-
+//+(BOOL)resolveClassMethod:(SEL)sel
+//{
+//    return [super resolveClassMethod:sel];
+//}
+//
 //+(BOOL)resolveInstanceMethod:(SEL)sel
 //{
 //    if (sel==@selector(eat)) {
@@ -45,7 +48,7 @@
 
 //-(NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector
 //{
-//    return nil;
+//    return [super methodSignatureForSelector:aSelector];
 //}
 //
 //

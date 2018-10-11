@@ -12,12 +12,12 @@
 
 void ePrint(int a[], int n ){
     
-    
     for(int j= 0; j<n; j++){
         
         printf("%d ",a[j]);
     }
-    printf("\n");
+    
+
 }
 
 void swap(int *a, int *b)

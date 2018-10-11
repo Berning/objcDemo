@@ -14,6 +14,8 @@
 
 @implementation BNHttp
 
+
+
 +(void)deviceDidConnectedNetworking:(void (^)(AFNetworkReachabilityStatus))block
 {
     AFNetworkReachabilityManager *mgr=[AFNetworkReachabilityManager sharedManager];
@@ -49,18 +51,17 @@
     [NSJSONSerialization JSONObjectWithData:obj options:NSJSONReadingMutableContainers error:&error]:[NSJSONSerialization dataWithJSONObject:obj options:NSJSONWritingPrettyPrinted error:&error];
 }
 
-+(void)afnExetion
++(void)test
 {
 //    [self handleWithURLConnection];
     
-//    [self handleWithSession];
+    [self handleWithSession];
 }
 
 +(void)handleWithSession
 {
     AFHTTPSessionManager *mgr=[AFHTTPSessionManager manager];
     [mgr GET:@"https://www.baidu.com" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"%@",mgr);
         NSLog(@"success");
 
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
@@ -73,43 +74,16 @@
 +(void)handleWithURLConnection
 {
     AFHTTPRequestOperationManager *mgr=[AFHTTPRequestOperationManager manager];
-    [mgr GET:@"https://wx2.sinaimg.cn/crop.0.0.1919.1079.1000/6e53d84fly1fdt4l2wks0j21hc0u07ke.jpg" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"%@",mgr);
-        NSLog(@"success");
+    [mgr GET:@"https://wx2.sinaimg.cn/mw690/624d98e1ly1fdmcckuhkcj20en081aaf.jpg" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"success:%@",responseObject);
+        
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"failure:%@",mgr);
-        NSLog(@"failure");
+        NSLog(@"failure:%ld--%@",error.code,error.domain);
+        
 
     }];
     
-    
-    AFNetworkReachabilityManager *manager=[AFNetworkReachabilityManager sharedManager];
-    
-    [manager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
-        switch (status) {
-            case -1:
-                NSLog(@"unkown");
-                break;
-            case 0:
-                NSLog(@"not able");
-                break;
-            case 1:
-                NSLog(@"wwan");
-                break;
-            case 2:
-                NSLog(@"WIFI");
-                break;
-                
-                
-            default:
-                break;
-        }
-    }];
-    
-    [manager startMonitoring];
-
-
 }
 
 
@@ -118,8 +92,14 @@
 
 @implementation BNKeyValue
 
++(void)test
+{
+    BNPerson *per=[self bnKeyValues];
+    NSLog(@"%@",per.mj_keyValues);
+    
+}
 
-+(BNPerson *)keyValues
++(BNPerson *)bnKeyValues
 {
     NSMutableDictionary *dict=[NSMutableDictionary dictionary];
     
@@ -134,17 +114,6 @@
 }
 
 
-+(id)objectWithKeyValues
-{
-    BNPerson *person=[BNPerson person];
-    person.name=@"berning";
-    person.age=110;
-    person.tclass=@"毕业";
-    person.weight=@"100";
-    
-    
-    return  person.mj_keyValues;
-}
 
 @end
 

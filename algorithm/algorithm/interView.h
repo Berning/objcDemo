@@ -21,7 +21,7 @@ float sqrtByBisection(float n); //二分
 float sqrtByNewton(float x);    //newton
 float sqrtByCarmack(float x);  //John Carmack
 
-void testCharacteristics();
+void testCharacteristics(void);
 
 
 @end

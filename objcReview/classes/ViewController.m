@@ -75,6 +75,10 @@
 //    [BNBaseStore test];
 //    [BNCoreData test];
     
+#pragma mark networking
+//    [BNKeyValue test];
+    [BNHttp test];
+ 
     
 }
 

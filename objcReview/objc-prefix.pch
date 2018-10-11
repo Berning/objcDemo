@@ -7,10 +7,8 @@
 //
 #ifdef __OBJC__
 
-#ifndef Xcode8_prefix_pch
-#define Xcode8_prefix_pch
+#ifndef objc_prefix_pch
+#define objc_prefix_pch
 
-//#define eLine  @"-----"
-#import "common.h"
-#endif /* Xcode8_prefix_pch */
+#endif /* objc_prefix_pch */
 #endif

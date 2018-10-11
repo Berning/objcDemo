@@ -11,46 +11,59 @@
 @implementation sort
 
 
-//直接插入排序
+//插入排序为 向前排序 
+//冒泡排序为 向后排序
+
+#pragma mark 直接插入排序，希尔排序
 void InsertionSort(int a[],int n)
 {
-    ePrint(a, 10);
-    for(int i= 1; i<n; i++){
-        if(a[i] < a[i-1]){               //若第i个元素大于i-1元素，直接插入。小于的话，移动有序表后插入
+    
+    for(int i= 1; i<n; i++)
+    {
+        if(a[i] < a[i-1])
+        {               //若第i个元素大于i-1元素，直接插入。小于的话，移动有序表后插入
             int j= i-1;
             int x = a[i];        //复制为哨兵，即存储待排序元素
             //            a[i] = a[i-1];           //先后移一个元素
-            while(j>=0&&x < a[j]){  //查找在有序表的插入位置
+            
+            //核心块
+            while(j>=0&&x < a[j])
+            {  //查找在有序表的插入位置
                 a[j+1] = a[j];
                 j--;         //元素后移
             }
             a[j+1] = x;      //插入到正确位置
         }
         ePrint (a,n);           //打印每趟排序的结果
+        ePrintNameM(i)
     }
     
-    ePrint(a, 10);
-    eLine
+    ePrint(a, n);
+    ePrintName
     
 }
 
 
-#warning --p有点问题
+#warning 有点问题
 //希尔排序
 void ShellInsertSort(int a[], int n, int dk)
 {
-    for(int i= dk; i<n; ++i){
-        if(a[i] < a[i-dk]){          //若第i个元素大于i-1元素，直接插入。小于的话，移动有序表后插入
+    for(int i= dk; i<n; ++i)
+    {
+        if(a[i] < a[i-dk])
+        {          //若第i个元素大于i-1元素，直接插入。小于的话，移动有序表后插入
             int j = i-dk;
             int x = a[i];           //复制为哨兵，即存储待排序元素
             a[i] = a[i-dk];         //首先后移一个元素
-            while(x < a[j]){     //查找在有序表的插入位置
+            while(x < a[j])
+            {     //查找在有序表的插入位置
                 a[j+dk] = a[j];
                 j -= dk;             //元素后移
             }
             a[j+dk] = x;            //插入到正确位置
         }
         ePrint(a, n );
+        ePrintNameM(i)
     }
     
 }
@@ -59,16 +72,18 @@ void ShellInsertSort(int a[], int n, int dk)
  * 先按增量d（n/2,n为要排序数的个数进行希尔排序
  *
  */
-void shellSort(int a[], int n){
+void shellSort(int a[], int n)
+{
     
     int dk = n/2;
-    while( dk >= 1  ){
+    while( dk >= 1  )
+    {
         ShellInsertSort(a, n, dk);
         dk = dk/2;
     }
 }
 
-#pragma 选择排序
+#pragma mark 选择排序（简单选择排序，堆排序）
 
 //简单选择排序
 void SelectSort(int r[],int n) {
@@ -87,27 +102,42 @@ void SelectSort(int r[],int n) {
         //该交换操作还可分情况讨论以提高效率
         swap(&r[i-1],  &r[min]);
         swap(&r[n-i],  &r[max]);
+        ePrint(r, n);
+        ePrintNameM(i);
 
 //        tmp = r[i-1]; r[i-1] = r[min]; r[min] = tmp;
 //        tmp = r[n-i]; r[n-i] = r[max]; r[max] = tmp;
         
     }
+    ePrint(r, n);
+    ePrintName
 }
 
 //堆排序
 
+#pragma mark 交换排序（冒泡，快排）
+
 //冒泡排序
-void bubbleSort(int a[], int n){
-    for(int i =0 ; i< n-1; ++i) {
-        for(int j = 0; j < n-i-1; ++j) {
+void bubbleSort(int a[], int n)
+{
+    for(int i =1 ; i< n; ++i)//i=1表示第1趟开始
+    {
+        for(int j = 0; j < n-i; ++j)//j为数据下标，所以必须0开始
+        {
             if(a[j] > a[j+1])
             {
                 swap(&a[j], &a[j+1]);
-//                int tmp = a[j] ; a[j] = a[j+1] ;  a[j+1] = tmp;
             }
         }
+        ePrint(a, n);
+        ePrintNameM(i);
     }
+
+    ePrint(a, n);
+    ePrintName
+
 }
+
 
 void bubbleSort_1 ( int r[], int n) {
     int i= n -1;  //初始时,最后位置保持不变
@@ -142,27 +172,30 @@ void bubbleSort_2 ( int r[], int n){
 }
 //快速排序
 
-
 int partition(int a[], int low, int high)
 {
-    int privotKey = a[low];                             //基准元素
+    static int i=1;
+    int pivotKey = a[low];                             //基准元素
     while(low < high){                                   //从表的两端交替地向中间扫描
-        while(low < high  && a[high] >= privotKey)
-            --high;                                         //从high 所指位置向前搜索，至多到low+1 位置。将比             基准元素小的交换到低端
+        while(low < high  && a[high] >= pivotKey)
+            --high;        //从high 所指位置向前搜索，至多到low+1 位置。将比基准元素小的交换到低端
         swap(&a[low], &a[high]);
+       
         ePrint(a,10);
+        ePrintNameQuickS(i, "high")
         
-        while(low < high  && a[low] <= privotKey )
-        {
+        while(low < high  && a[low] <= pivotKey )
             ++low;
-            
-        }
         swap(&a[low], &a[high]);
-        
-    
+       
         ePrint(a,10);
+        ePrintNameQuickS(i, "low");
+
     }
     ePrint(a,10);
+    ePrintNameM(i)
+    ++i;
+
     return low;
 }
 
@@ -170,10 +203,12 @@ int partition(int a[], int low, int high)
 void quickSort(int a[], int low, int high)
 {
     if(low < high){
-        int privotLoc = partition(a,  low,  high);  //将表一分为二
-        printf("loc=%d",privotLoc);
-        quickSort(a,  low,  privotLoc -1);          //递归对低子表递归排序
-        quickSort(a,   privotLoc + 1, high);        //递归对高子表递归排序
+        int pivotLoc = partition(a,  low,  high);  //将表一分为二
+        printf("pivotLoc=%d,low=%d,high=%d\n",pivotLoc,low,high);
+        quickSort(a,  low,  pivotLoc -1);          //递归对低子表递归排序
+        quickSort(a,   pivotLoc + 1, high);        //递归对高子表递归排序
+        
+
     }
 }
 
@@ -205,6 +240,19 @@ void quickSort1(int r[], int n, int k)
     }
     
 }
+
+
+#pragma mark 归并排序
+
+
+#pragma mark 基数排序
+
+
+
+
+
+
+
 
 
 

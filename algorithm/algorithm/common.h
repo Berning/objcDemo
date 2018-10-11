@@ -5,16 +5,21 @@
 //  Created by uBerning on 16/12/29.
 //  Copyright © 2016年 360. All rights reserved.
 //
-#define eLine       NSLog(@"------------------------------------");
-#define ePrintf(inta,floata)     NSLog(@"%f--%ld",inta,floata);
+
+#define ePrintNameM(i)   printf("---%s_time%d\n",__func__,i);
+#define ePrintName       printf("---%s\n",__func__);
+#define ARRAY_SIZE(x) (sizeof(x)/sizeof((x)[0]))
+#define ePrintNameQuickS(i,loc)   printf("---%s_time%d---%s\n",__func__,i,loc);
+
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+
 
 @interface common : NSObject
 
 void ePrint(int a[], int n );
 
 void swap(int *a, int *b);
+
 
 @end
