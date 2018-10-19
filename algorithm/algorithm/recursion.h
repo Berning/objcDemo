@@ -16,6 +16,8 @@ void hanoi(int n,int p1,int p2,int p3);
 
 void Perm(int list[],int k,int m);
 
-long Fib(int n);
+long Fibonaci(int n);
+
+void recursionTest(int low ,int high); //快排中用到
 
 @end

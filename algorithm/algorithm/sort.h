@@ -11,21 +11,29 @@
 @interface sort : NSObject
 
 //插入
-void InsertionSort(int a[],int n);
-void shellSort(int a[], int n);
+void bnInsertionSort(int a[],int n);
+
+void bnShellSort(int a[], int n);
 
 //选择
-void SelectSort(int r[],int n) ;
+void bnSelectSort(int a[],int n) ;
+
+void bnSelectSortS(int a[],int n);
+void bnHeapSort(int a[],int n);
 
 //交换
-void bubbleSort(int a[], int n);
-void bubbleSort_1 ( int r[], int n) ;
-void bubbleSort_2 ( int r[], int n);
+void bnBubbleSort(int a[], int n);
+void bnBubbleSort_while( int a[], int n) ;
+void bnBubbleSort_Cocktail( int a[], int n);
 
-void quickSort(int a[], int low, int high);
-void quickSort1(int r[], int n, int k);
+void bnQuickSort(int a[],int n);
+void bnQuickSort_improve(int a[], int n);
 
+//归并
+void bnMergeSort(int a[], int n);
 
+//基数（桶）
+void bnBucketSort(int a[], int n);
 
 
 @end

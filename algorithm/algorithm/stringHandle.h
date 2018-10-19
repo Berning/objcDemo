@@ -1,5 +1,5 @@
 //
-//  cutReptCharacter.h
+//  stringHandle.h
 //  algorithm
 //
 //  Created by uBerning on 2017/3/12.
@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface cutReptCharacter : NSObject
+@interface stringHandle : NSObject
+
+@property(class,readonly)void test;
 
 @end

@@ -62,7 +62,7 @@ void Perm(int list[],int k,int m)
 
 
 //斐波那契
-long Fib(int n)
+long Fibonaci(int n)
 {
     long fibNum=0;
     if (0 == n)
@@ -70,7 +70,7 @@ long Fib(int n)
     if (1 == n)
         fibNum= 1;
     if (n > 1)
-        fibNum= Fib(n-1) + Fib(n-2);
+        fibNum= Fibonaci(n-1) + Fibonaci(n-2);
     return fibNum;
 }
 
@@ -86,5 +86,34 @@ long Fib(int n)
 //        }
 //    }
 //}
+
+
+int partition1(int low,int high)
+{
+    low++;
+    
+    return low;
+}
+
+void recursionTest(int low ,int high)  //快排中用到
+{
+    printf("low=%d,high=%d",low,high);
+    if(low<high)
+    {
+        printf("--------------------调用成功\n\n\n");
+        int pivot=partition1(low, high);
+        
+        printf("================first recursion================\n");
+        printf("pivot=%d\n",pivot);
+
+        recursionTest(pivot, high-1);   //第一次递归成功几次（即产生几个pivot），待第二次递归失败，就回来再调用几次第一个递归，调用完之后再进行第二个递归。
+        
+        printf("--------------------调用失败\n\n\n");
+        printf("================second recursion================\n");
+        
+        recursionTest(pivot, high);
+    }
+    
+}
 
 @end
