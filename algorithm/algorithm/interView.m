@@ -27,46 +27,6 @@ void shuffle(int *a ,int n)
 
 }
 
-
-int  squareSum(int n)
-{
-    int flags=0;
-    int x=n;
-    
-    while (x!=0) {
-        flags++;
-        
-        x-=(int)sqrt(x)*(int)sqrt(x);
-    }
-    
-    
-    return flags;
-}
-
-int  squareMin(int n)
-{
-    int flags=0;
-    
-//    int a=(int)sqrt(n);
-    
-//    if(n==0)
-//        return 1;
-//    else if
-//    {
-//        while (a>0) {
-//            
-//        }
-//        
-//    
-//    }
-//        
-    
-    
-    
-    return  flags;
-}
-
-
 //开方的三种算法
 
 //John Carmack
@@ -75,6 +35,7 @@ float sqrtByCarmack(float x)
 {
     float xhalf = 0.5f*x;
     int i = *(int*)&x; // get bits for floating VALUE
+    printf("i:%d\n",i);
     i = 0x5f375a86- (i>>1); // gives initial guess y0
     x = *(float*)&i; // convert bits BACK to float
     x = x*(1.5f-xhalf*x*x); // Newton step, repeating increases accuracy
@@ -86,8 +47,8 @@ float sqrtByCarmack(float x)
 
 float sqrtByNewton(float x)
 {
-    float val = x;//◊Ó÷’
-    float last;//±£¥Ê…œ“ª∏ˆº∆À„µƒ÷µ
+    float val = x; //先猜想一个值，即猜想val为x
+    float last;
     do
     {
         last = val;
@@ -97,23 +58,22 @@ float sqrtByNewton(float x)
 }
 
 //二分法
-float sqrtByBisection(float n) //”√∂˛∑÷∑®
-{
-    if(n<0) //–°”⁄0µƒ∞¥’’ƒ„–Ë“™µƒ¥¶¿Ì
+float sqrtByBisection(float n) {
+    if(n<0)
         return n;
     float mid,last;
-    float low,up;
-    (void)(low=0),up=n;
-    mid=(low+up)/2;
+    float low,high;
+    (void)(low=0),high=n;
+    mid=(low+high)/2;
     do
     {
         if(mid*mid>n)
-            up=mid;
+            high=mid;
         else
             low=mid;
         last=mid;
-        mid=(up+low)/2; 
-    }while(fabs(mid-last) > eps);//æ´∂»øÿ÷∆
+        mid=(high+low)/2;
+    }while(fabs(mid-last) > eps);
     return mid; 
 }
 

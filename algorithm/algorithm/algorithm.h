@@ -9,7 +9,9 @@
 #ifndef algorithm_h
 #define algorithm_h
 #import "sort.h"
+#import "search.h"
 #import "interView.h"
 #import "stringHandle.h"
 #import "recursion.h"
+
 #endif /* algorithm_h */

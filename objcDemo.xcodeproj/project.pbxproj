@@ -117,6 +117,8 @@
 		0B4F74DF2172312800542D5F /* linkList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4F74DE2172312800542D5F /* linkList.m */; };
 		0B4F74E3217234CE00542D5F /* alTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4F74E2217234CE00542D5F /* alTest.m */; };
 		0B4F74E6217235F300542D5F /* dsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4F74E5217235F300542D5F /* dsTest.m */; };
+		0B5C4E38217C9B5400E0A113 /* search.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5C4E37217C9B5400E0A113 /* search.m */; };
+		0B5C4E3B217CA2F600E0A113 /* fibnociSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5C4E3A217CA2F600E0A113 /* fibnociSearch.m */; };
 		0BCFB2AA216A04FE0046BB73 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCFB2A9216A04FE0046BB73 /* main.m */; };
 		0BE3DDA6216CA7DA00882E05 /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3DD93216CA7DA00882E05 /* MJExtensionConst.m */; };
 		0BE3DDA7216CA7DA00882E05 /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3DD95216CA7DA00882E05 /* MJFoundation.m */; };
@@ -415,6 +417,10 @@
 		0B4F74E2217234CE00542D5F /* alTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = alTest.m; sourceTree = "<group>"; };
 		0B4F74E4217235F300542D5F /* dsTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dsTest.h; sourceTree = "<group>"; };
 		0B4F74E5217235F300542D5F /* dsTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dsTest.m; sourceTree = "<group>"; };
+		0B5C4E36217C9B5400E0A113 /* search.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = search.h; sourceTree = "<group>"; };
+		0B5C4E37217C9B5400E0A113 /* search.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = search.m; sourceTree = "<group>"; };
+		0B5C4E39217CA2F600E0A113 /* fibnociSearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fibnociSearch.h; sourceTree = "<group>"; };
+		0B5C4E3A217CA2F600E0A113 /* fibnociSearch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fibnociSearch.m; sourceTree = "<group>"; };
 		0B7FB04C2178A894005972A6 /* concepts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = concepts.h; sourceTree = "<group>"; };
 		0BCFB2A7216A04FE0046BB73 /* runtime */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = runtime; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BCFB2A9216A04FE0046BB73 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -1036,6 +1042,10 @@
 				0BE3DDEF216CC06200882E05 /* recursion.m */,
 				0BE3DDF0216CC06200882E05 /* sort.h */,
 				0BE3DDF1216CC06200882E05 /* sort.m */,
+				0B5C4E39217CA2F600E0A113 /* fibnociSearch.h */,
+				0B5C4E3A217CA2F600E0A113 /* fibnociSearch.m */,
+				0B5C4E36217C9B5400E0A113 /* search.h */,
+				0B5C4E37217C9B5400E0A113 /* search.m */,
 				0B4F74E1217234CE00542D5F /* alTest.h */,
 				0B4F74E2217234CE00542D5F /* alTest.m */,
 			);
@@ -1347,10 +1357,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B4F74E3217234CE00542D5F /* alTest.m in Sources */,
+				0B5C4E38217C9B5400E0A113 /* search.m in Sources */,
 				0BE3DDF2216CC06200882E05 /* common.m in Sources */,
 				0B4F74DB21722D4300542D5F /* sqList.m in Sources */,
 				0BE3DDE3216CC03600882E05 /* main.m in Sources */,
 				0BE3DDF3216CC06200882E05 /* stringHandle.m in Sources */,
+				0B5C4E3B217CA2F600E0A113 /* fibnociSearch.m in Sources */,
 				0BE3DDF5216CC06200882E05 /* recursion.m in Sources */,
 				0BE3DDF4216CC06200882E05 /* interView.m in Sources */,
 				0BE3DDF6216CC06200882E05 /* sort.m in Sources */,

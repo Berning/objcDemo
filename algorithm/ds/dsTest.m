@@ -13,5 +13,7 @@
 +(void)test
 {
     [sqList test];
+    
 }
+
 @end

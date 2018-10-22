@@ -12,10 +12,6 @@
 
 void shuffle(int *a ,int n);
 
-int squareSum(int n);
-
-int  squareMin(int n);
-
 //sqrt
 float sqrtByBisection(float n); //二分
 float sqrtByNewton(float x);    //newton

@@ -12,12 +12,37 @@
 
 +(void)test
 {
-    [stringHandle test];
-//    [self algorithmTest];
+//    [stringHandle test];
+//    [self sqrtTest];
+//    [self sortTest];
+    [self searchTest];
+}
+
++(void)searchTest
+{
+    int arr[]={0,1,2,3,4,5,6,7,8,9};
+    ePrint(arr, ARRAY_SIZE(arr));
+    ePrintName;
+//    shuffle(arr,ARRAY_SIZE(arr));
+    int value=8;
+    
+//    ePrintSearchResult(bnSeqSearch(arr,value , ARRAY_SIZE(arr)));
+//    ePrintSearchResult(bnBinarySearch(arr, value, ARRAY_SIZE(arr))); //??
+//    ePrintSearchResult(bnBinarySearchRecursion(arr, value, 0, 9));
+    ePrintSearchResult(bnInsertionSearch(arr, value, 0, 9));
+}
+
++(void)sqrtTest
+{
+
+//    sqrtByBisection(8);
+//    sqrtByNewton(8);
+//    sqrtByCarmack(8);
+//    testCharacteristics();
 
 }
 
-+(void)algorithmTest
++(void)sortTest
 {
     int arr[]={0,1,2,3,4,5,6,7,8,9};
     ePrint(arr, ARRAY_SIZE(arr));
@@ -49,7 +74,6 @@
     //    bnBucketSort(arr, ARRAY_SIZE(arr));
     
 #pragma  mark test
-    //    testCharacteristics();
     //    recursionTest(0, 5);
     
 }

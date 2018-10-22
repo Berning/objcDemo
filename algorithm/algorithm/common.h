@@ -11,6 +11,7 @@
 #define ARRAY_SIZE(x) (sizeof(x)/sizeof((x)[0]))
 #define ePrintNameQuickS(i,loc)   printf("---%s_time%d---%s\n",__func__,i,loc);
 
+#define ePrintSearchResult(result)     printf("result:%d\n",result);
 
 #import <Foundation/Foundation.h>
 
