@@ -20,6 +20,7 @@ int bnBinarySearchRecursion(int a[], int value, int low, int high);
 
 int bnInsertionSearch(int a[], int value, int low, int high);
 
+int bnFibnocciSearch(int a[],int value,int n);
 
 @end
 

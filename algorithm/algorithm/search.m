@@ -7,6 +7,7 @@
 //
 
 #import "search.h"
+#import "fibnociSearch.h"
 
 @implementation search
 
@@ -24,7 +25,7 @@ int bnSeqSearch(int a[], int value, int n)
 
 //二分查找（折半查找）
 //ps:1.要求线性表顺序存储；2.有序排列
-//复杂度分析：最坏情况下，关键词比较次数为log2(n+1)，且期望时间复杂度为O(log2n)；
+//复杂度分析：最坏情况下，关键词比较次数为log2(n+1)，且期望时间复杂度为O(log2(n))；
 int bnBinarySearch(int a[], int value, int n)
 {
     int low, high, mid;
@@ -78,6 +79,13 @@ int bnInsertionSearch(int a[], int value, int low, int high)
         return bnInsertionSearch(a, value, mid+1, high);
     return -1;
 }
+
+int bnFibnocciSearch(int a[],int value,int n)
+{
+    return Fibonacci_Search(a, n, value);
+}
+
+
 
 
 

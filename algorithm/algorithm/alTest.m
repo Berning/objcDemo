@@ -20,16 +20,17 @@
 
 +(void)searchTest
 {
-    int arr[]={0,1,2,3,4,5,6,7,8,9};
+    int arr[]={0,1,2,3,4,5,6,7,8,9,20,30,50,80,100};
     ePrint(arr, ARRAY_SIZE(arr));
     ePrintName;
 //    shuffle(arr,ARRAY_SIZE(arr));
-    int value=8;
+    int value=50;
     
 //    ePrintSearchResult(bnSeqSearch(arr,value , ARRAY_SIZE(arr)));
 //    ePrintSearchResult(bnBinarySearch(arr, value, ARRAY_SIZE(arr))); //??
 //    ePrintSearchResult(bnBinarySearchRecursion(arr, value, 0, 9));
-    ePrintSearchResult(bnInsertionSearch(arr, value, 0, 9));
+//    ePrintSearchResult(bnInsertionSearch(arr, value, 0, 9));
+    ePrintSearchResult(bnFibnocciSearch(arr, value, ARRAY_SIZE(arr)));
 }
 
 +(void)sqrtTest

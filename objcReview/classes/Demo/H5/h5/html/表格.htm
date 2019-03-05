@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+            <title>表格</title>
+    </head>
+    
+    <body>
+        <!--表1-->
+        <h1>family</h1>
+        
+        <Table border="1">
+            <caption>表1</caption>
+            
+            <tr>
+                <th>序号</th>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>年龄</th>
+            </tr>
+            
+            <tr>
+                <td>001</td>
+                <td>王柏宁</td>
+                <td>男</td>
+                <td>28</td>
+            </tr>
+            
+            <tr>
+                <td>002</td>
+                <td>王子航</td>
+                <td>男</td>
+                <td>4</td>
+            </tr>
+            
+            <tr>
+                <td>003</td>
+                <td>王子妍</td>
+                <td>女</td>
+                <td>1</td>
+            </tr>
+            
+        </Table>
+        
+        
+        <!--表2-->
+        <h1>单元格跨两格</h1>
+        <table border="1">
+            <caption>表2</caption>
+            <tr>
+                <th>Name</th>
+                <th colspan="2">Telephone</th>
+            </tr>
+            <tr>
+                <td>Bill Gates</td>
+                <td>555 77 854</td>
+                <td>555 77 855</td>
+            </tr>
+        </table>
+        
+        <!--表3-->
+        <h1>单元格跨两列</h1>
+        <table border="1">
+            <caption>表3</caption>
+            <tr>
+                <th>First Name:</th>
+                <td>Bill Gates</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Telephone:</th>
+                <td>555 77 854</td>
+            </tr>
+            <tr>
+                <td>555 77 855</td>
+            </tr>
+        </table>
+        
+        
+        <!--表4-->
+        <h1>表内的标签</h1>
+        <table border="1">
+            <caption>表4</caption>
+            <tr>
+                <td>
+                    <p>这是一个段落</p>
+                    <p>这是另一个段落</p>
+                </td>
+                <td>这个单元格包含一个表格:
+                    <table border="1">
+                        <tr>
+                            <td>A</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>C</td>
+                            <td>D</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>这个单元格包含一个列表
+                    <ul>
+                        <li>apples</li>
+                        <li>bananas</li>
+                        <li>pineapples</li>
+                    </ul>
+                </td>
+                <td>HELLO</td>
+            </tr>
+        </table>
+        
+        <!--表5-->
+        <h1>没有单元格边距(长)</h1>
+        <table border="1">
+            <caption>表5</caption>
+
+            <tr>
+                <td>First</td>
+                <td>Row</td>
+            </tr>
+            <tr>
+                <td>Second</td>
+                <td>Row</td>
+            </tr>
+        </table>
+        
+        <!--表6-->
+        <h1>有单元格边距(长)</h1>
+        <table border="1" cellpadding="50">
+            <caption>表6</caption>
+            <tr>
+                <td>First</td>
+                <td>Row</td>
+            </tr>
+            <tr>
+                <td>Second</td>
+                <td>Row</td>
+            </tr>
+        </table>
+        
+        
+        <!--表7-->
+        <h1>没有单元格间距:</h1>
+        <table border="1">
+            <caption>表7</caption>
+            <tr>
+                <td>First</td>
+                <td>Row</td>
+            </tr>
+            <tr>
+                <td>Second</td>
+                <td>Row</td>
+            </tr>
+        </table>
+        
+        
+        <!--表8-->
+        <h1>单元格间距="0":</h1>
+        <table border="1" cellspacing="0">
+            <caption>表8</caption>
+            <tr>
+                <td>First</td>
+                <td>Row</td>
+            </tr>
+            <tr>
+                <td>Second</td>
+                <td>Row</td>
+            </tr>
+        </table>
+
+        <!--表10-->
+        <h1>单元格间距="10":</h1>
+        <table border="1" cellspacing="10">
+            <caption>表9</caption>
+            <tr>
+                <td>First</td>
+                <td>Row</td>
+            </tr>
+            <tr>
+                <td>Second</td>
+                <td>Row</td>
+            </tr>
+        </table>
+        
+        
+    </body>
+</html>

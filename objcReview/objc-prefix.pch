@@ -10,5 +10,8 @@
 #ifndef objc_prefix_pch
 #define objc_prefix_pch
 
+#include "BNHeaders.h"
+
 #endif /* objc_prefix_pch */
+
 #endif
