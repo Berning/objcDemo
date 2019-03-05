@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>标题</string>
+	<string>水平线</string>
+	<string>段落</string>
+	<string>格式</string>
+	<string>链接</string>
+	<string>头部</string>
+	<string>css</string>
+	<string>css内联样式</string>
+	<string>css内部样式</string>
+	<string>css外部样式</string>
+	<string>图像</string>
+	<string>表格</string>
+</array>
+</plist>

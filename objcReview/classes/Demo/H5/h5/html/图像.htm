@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    
+    <body>
+        <h1>本地图像</h1>
+        <img src="mybeard.jpeg" alt="url error" width="300" height="300" border="5"  />
+        <h1>未找到本地图像</h1>
+        <img src="mybeard.jpg" alt="url error" width="300" height="300" />
+
+        <h1>网络图像</h1>
+        <img src="http://imgm.gmw.cn/attachement/jpg/site215/20190206/7166194289973346580.jpg" atl="url error" width="300" height="300" />
+        <h1>未找到网络图像</h1>
+        <img src="http://imgm.gmw.cn/attachement/jpg/site215/20190206/7166194289973346580" atl="url error" width="300" height="300" />
+
+        
+        <h1>默认对齐的图像 (align="bottom"):</h1>
+        <p>这是一些文本。 <img src="mybeard.jpeg" alt="Smiley face" width="32" height="32"> 这是一些文本。</p>
+            
+        <h1>图片使用 align="middle":</h1>
+        <p>这是一些文本。 <img src="mybeard.jpeg" alt="Smiley face" align="middle" width="32" height="32">这是一些文本。</p>
+                
+        <h1>图片使用 align="top":</h1>
+        <p>这是一些文本。 <img src="mybeard.jpeg" alt="Smiley face" align="top" width="32" height="32">这是一些文本。</p>
+            
+          
+        <h1>浮动图片</h1>
+        <p>
+        <img src="mybeard.jpeg" alt="Smiley face" style="float:left" width="32" height="32"/> 一个带图片的段落，图片浮动在这个文本的左边。
+        </p>
+                
+        <p>
+        <img src="mybeard.jpeg" alt="Smiley face" style="float:right" width="32" height="32" /> 一个带图片的段落，图片浮动在这个文本的右边。
+        </p>
+            
+        <p><b>注意:</b> 在这里我们使用了 CSS "float" 属性，在HTML 4中 align 属性已废弃，HTML5 已不支持该属性，可以使用 CSS 代替。
+        </p>
+        
+        
+        <h1>图片链接</h1>
+        <p>图片链接:<a href="https://www.baidu.com"><img border="0" src="mybeard.jpeg" alt="url error" width="32" height="32"></a></p>
+        
+        <h1>map</h1>
+        <img src="mybeard.jpeg" width="300" height="300" alt="url error" usemap="#beardmap" />
+            
+        <map name="beardmap">
+            <area shape="rect" coords="0,0,150,300" alt="Sun" href="https://www.baidu.com"/>
+            <area shape="circle" coords="225,75,75" alt="Mercury" href="https://www.qq.com"/>
+            <area shape="circle" coords="225,225,75" alt="Venus" href="https://www.github.com"/>
+        </map>
+        
+    </body>
+</html>

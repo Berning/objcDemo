@@ -9,6 +9,16 @@
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
+		<key>H5.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>UI.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>algorithm.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -24,7 +34,7 @@
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
-		<key>coreData.xcscheme_^#shared#^_</key>
+		<key>coreData.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>

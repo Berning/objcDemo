@@ -8,10 +8,9 @@
 
 #import "fibnociSearch.h"
 
-@implementation fibnociSearch
-
-
 const int max_size=20;//斐波那契数组的长度
+
+@implementation fibnociSearch
 
 /*构造一个斐波那契数组*/
 void Fibonacci(int * F)
@@ -23,7 +22,7 @@ void Fibonacci(int * F)
 }
 
 /*定义斐波那契查找法*/
-int Fibonacci_Search(int *a, int n, int key)  //a为要查找的数组,n为要查找的数组长度,key为要查找的关键字
+int Fibonacci_Search(int *a, int n, int key)
 {
     int low=0;
     int high=n-1;
@@ -36,6 +35,7 @@ int Fibonacci_Search(int *a, int n, int key)  //a为要查找的数组,n为要�
         ++k;
     
     int  * temp;//将数组a扩展到F[k]-1的长度
+    
     temp=(int *)malloc(sizeof(int)*(F[k]-1));
     memcpy(temp,a,n*sizeof(int));
     
@@ -63,9 +63,9 @@ int Fibonacci_Search(int *a, int n, int key)  //a为要查找的数组,n为要�
                 return n-1; //若mid>=n则说明是扩展的数值,返回n-1
         }
     }
+    
     free(temp);
     return -1;
 }
-
 
 @end
