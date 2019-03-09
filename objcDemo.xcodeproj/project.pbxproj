@@ -162,6 +162,7 @@
 		0B67889F223461D200651C35 /* 区块div.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B67889E223461D100651C35 /* 区块div.htm */; };
 		0B6788A12234656900651C35 /* 区块table布局.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788A02234656900651C35 /* 区块table布局.htm */; };
 		0B6788A32234661000651C35 /* span.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788A22234661000651C35 /* span.htm */; };
+		0B6788A522346A8000651C35 /* form.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788A422346A8000651C35 /* form.htm */; };
 		0B779BF221EDB789001F403B /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B779BC621EDB789001F403B /* MJRefreshAutoFooter.m */; };
 		0B779BF321EDB789001F403B /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B779BC821EDB789001F403B /* MJRefreshBackFooter.m */; };
 		0B779BF421EDB789001F403B /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B779BCA21EDB789001F403B /* MJRefreshComponent.m */; };
@@ -600,6 +601,7 @@
 		0B67889E223461D100651C35 /* 区块div.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "区块div.htm"; sourceTree = "<group>"; };
 		0B6788A02234656900651C35 /* 区块table布局.htm */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "区块table布局.htm"; sourceTree = "<group>"; };
 		0B6788A22234661000651C35 /* span.htm */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = span.htm; sourceTree = "<group>"; };
+		0B6788A422346A8000651C35 /* form.htm */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = form.htm; sourceTree = "<group>"; };
 		0B779BC521EDB789001F403B /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
 		0B779BC621EDB789001F403B /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoFooter.m; sourceTree = "<group>"; };
 		0B779BC721EDB789001F403B /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
@@ -1925,6 +1927,7 @@
 				0B67889E223461D100651C35 /* 区块div.htm */,
 				0B6788A02234656900651C35 /* 区块table布局.htm */,
 				0B6788A22234661000651C35 /* span.htm */,
+				0B6788A422346A8000651C35 /* form.htm */,
 			);
 			path = html;
 			sourceTree = "<group>";
@@ -2080,6 +2083,7 @@
 				0B67888D222E92DC00651C35 /* 列表.htm in Resources */,
 				0B6788A32234661000651C35 /* span.htm in Resources */,
 				0BA33CD3220C39C500DF887B /* css内部样式.htm in Resources */,
+				0B6788A522346A8000651C35 /* form.htm in Resources */,
 				0BA33CCB220B40A400DF887B /* 链接.htm in Resources */,
 				0BA33CC9220B39EE00DF887B /* 段落.html in Resources */,
 				0B67889F223461D200651C35 /* 区块div.htm in Resources */,
