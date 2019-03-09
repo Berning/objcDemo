@@ -159,6 +159,7 @@
 		0B5C4E3B217CA2F600E0A113 /* fibnociSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5C4E3A217CA2F600E0A113 /* fibnociSearch.m */; };
 		0B67888D222E92DC00651C35 /* 列表.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B67888C222E92DC00651C35 /* 列表.htm */; };
 		0B67888F222E96A500651C35 /* 列表2.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B67888E222E96A500651C35 /* 列表2.htm */; };
+		0B67889F223461D200651C35 /* 区块div.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B67889E223461D100651C35 /* 区块div.htm */; };
 		0B779BF221EDB789001F403B /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B779BC621EDB789001F403B /* MJRefreshAutoFooter.m */; };
 		0B779BF321EDB789001F403B /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B779BC821EDB789001F403B /* MJRefreshBackFooter.m */; };
 		0B779BF421EDB789001F403B /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B779BCA21EDB789001F403B /* MJRefreshComponent.m */; };
@@ -594,6 +595,7 @@
 		0B5C4E3A217CA2F600E0A113 /* fibnociSearch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fibnociSearch.m; sourceTree = "<group>"; };
 		0B67888C222E92DC00651C35 /* 列表.htm */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "列表.htm"; sourceTree = "<group>"; };
 		0B67888E222E96A500651C35 /* 列表2.htm */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "列表2.htm"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.html; };
+		0B67889E223461D100651C35 /* 区块div.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "区块div.htm"; sourceTree = "<group>"; };
 		0B779BC521EDB789001F403B /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
 		0B779BC621EDB789001F403B /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoFooter.m; sourceTree = "<group>"; };
 		0B779BC721EDB789001F403B /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
@@ -1916,6 +1918,7 @@
 				0BA33CC0220B1FCC00DF887B /* 表格.htm */,
 				0B67888C222E92DC00651C35 /* 列表.htm */,
 				0B67888E222E96A500651C35 /* 列表2.htm */,
+				0B67889E223461D100651C35 /* 区块div.htm */,
 			);
 			path = html;
 			sourceTree = "<group>";
@@ -2072,6 +2075,7 @@
 				0BA33CD3220C39C500DF887B /* css内部样式.htm in Resources */,
 				0BA33CCB220B40A400DF887B /* 链接.htm in Resources */,
 				0BA33CC9220B39EE00DF887B /* 段落.html in Resources */,
+				0B67889F223461D200651C35 /* 区块div.htm in Resources */,
 				0BA33CCD220B41EB00DF887B /* 图像.htm in Resources */,
 				0B387AFB21E343EF001A0ED7 /* Paths.webarchive in Resources */,
 				0B779C0021EDB789001F403B /* MJRefresh.bundle in Resources */,
