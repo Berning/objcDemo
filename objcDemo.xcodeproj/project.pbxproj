@@ -168,6 +168,7 @@
 		0B6788AD2240FC7C00651C35 /* iframe.html in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788AC2240FC7C00651C35 /* iframe.html */; };
 		0B6788AF2241007000651C35 /* iframe-demo.html in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788AE2241007000651C35 /* iframe-demo.html */; };
 		0B6788B322410BBE00651C35 /* color.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788B222410BBE00651C35 /* color.htm */; };
+		0B6788B5224118AA00651C35 /* colorname.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788B4224118AA00651C35 /* colorname.htm */; };
 		0B779BF221EDB789001F403B /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B779BC621EDB789001F403B /* MJRefreshAutoFooter.m */; };
 		0B779BF321EDB789001F403B /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B779BC821EDB789001F403B /* MJRefreshBackFooter.m */; };
 		0B779BF421EDB789001F403B /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B779BCA21EDB789001F403B /* MJRefreshComponent.m */; };
@@ -612,6 +613,7 @@
 		0B6788AC2240FC7C00651C35 /* iframe.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = iframe.html; sourceTree = "<group>"; };
 		0B6788AE2241007000651C35 /* iframe-demo.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "iframe-demo.html"; sourceTree = "<group>"; };
 		0B6788B222410BBE00651C35 /* color.htm */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = color.htm; sourceTree = "<group>"; };
+		0B6788B4224118AA00651C35 /* colorname.htm */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = colorname.htm; sourceTree = "<group>"; };
 		0B779BC521EDB789001F403B /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
 		0B779BC621EDB789001F403B /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoFooter.m; sourceTree = "<group>"; };
 		0B779BC721EDB789001F403B /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
@@ -1943,6 +1945,7 @@
 				0B6788AC2240FC7C00651C35 /* iframe.html */,
 				0B6788AE2241007000651C35 /* iframe-demo.html */,
 				0B6788B222410BBE00651C35 /* color.htm */,
+				0B6788B4224118AA00651C35 /* colorname.htm */,
 			);
 			path = html;
 			sourceTree = "<group>";
@@ -2113,6 +2116,7 @@
 				0B6788B322410BBE00651C35 /* color.htm in Resources */,
 				0B6788AD2240FC7C00651C35 /* iframe.html in Resources */,
 				0B6788AB2240DA4700651C35 /* demo-form.php in Resources */,
+				0B6788B5224118AA00651C35 /* colorname.htm in Resources */,
 				0B6788A12234656900651C35 /* 区块table布局.htm in Resources */,
 				0BA33CD1220C387800DF887B /* css.htm in Resources */,
 				0B6788A72234FECA00651C35 /* form-examples.htm in Resources */,
