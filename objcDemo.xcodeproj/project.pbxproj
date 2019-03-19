@@ -163,6 +163,8 @@
 		0B6788A12234656900651C35 /* 区块table布局.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788A02234656900651C35 /* 区块table布局.htm */; };
 		0B6788A32234661000651C35 /* span.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788A22234661000651C35 /* span.htm */; };
 		0B6788A522346A8000651C35 /* form.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788A422346A8000651C35 /* form.htm */; };
+		0B6788A72234FECA00651C35 /* form-examples.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788A62234FECA00651C35 /* form-examples.htm */; };
+		0B6788AB2240DA4700651C35 /* demo-form.php in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788AA2240DA4700651C35 /* demo-form.php */; };
 		0B779BF221EDB789001F403B /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B779BC621EDB789001F403B /* MJRefreshAutoFooter.m */; };
 		0B779BF321EDB789001F403B /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B779BC821EDB789001F403B /* MJRefreshBackFooter.m */; };
 		0B779BF421EDB789001F403B /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B779BCA21EDB789001F403B /* MJRefreshComponent.m */; };
@@ -602,6 +604,8 @@
 		0B6788A02234656900651C35 /* 区块table布局.htm */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "区块table布局.htm"; sourceTree = "<group>"; };
 		0B6788A22234661000651C35 /* span.htm */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = span.htm; sourceTree = "<group>"; };
 		0B6788A422346A8000651C35 /* form.htm */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = form.htm; sourceTree = "<group>"; };
+		0B6788A62234FECA00651C35 /* form-examples.htm */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "form-examples.htm"; sourceTree = "<group>"; };
+		0B6788AA2240DA4700651C35 /* demo-form.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = "demo-form.php"; sourceTree = "<group>"; };
 		0B779BC521EDB789001F403B /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
 		0B779BC621EDB789001F403B /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoFooter.m; sourceTree = "<group>"; };
 		0B779BC721EDB789001F403B /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
@@ -1928,6 +1932,8 @@
 				0B6788A02234656900651C35 /* 区块table布局.htm */,
 				0B6788A22234661000651C35 /* span.htm */,
 				0B6788A422346A8000651C35 /* form.htm */,
+				0B6788A62234FECA00651C35 /* form-examples.htm */,
+				0B6788AA2240DA4700651C35 /* demo-form.php */,
 			);
 			path = html;
 			sourceTree = "<group>";
@@ -2094,8 +2100,10 @@
 				0BA33CCF220C30FF00DF887B /* 头部.htm in Resources */,
 				0B67888F222E96A500651C35 /* 列表2.htm in Resources */,
 				0BAE7FEF21D921A0009134E6 /* Info.plist in Resources */,
+				0B6788AB2240DA4700651C35 /* demo-form.php in Resources */,
 				0B6788A12234656900651C35 /* 区块table布局.htm in Resources */,
 				0BA33CD1220C387800DF887B /* css.htm in Resources */,
+				0B6788A72234FECA00651C35 /* form-examples.htm in Resources */,
 				0B45774B21E3A0F700859F97 /* 格式.htm in Resources */,
 				0BA33CD5220C3A4800DF887B /* css内联样式.htm in Resources */,
 				0BA33CC7220B387E00DF887B /* 水平线.htm in Resources */,
