@@ -24,5 +24,6 @@
 	<string>iframe</string>
 	<string>color</string>
 	<string>colorname</string>
+	<string>char</string>
 </array>
 </plist>

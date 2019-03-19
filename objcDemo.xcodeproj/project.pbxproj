@@ -169,6 +169,7 @@
 		0B6788AF2241007000651C35 /* iframe-demo.html in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788AE2241007000651C35 /* iframe-demo.html */; };
 		0B6788B322410BBE00651C35 /* color.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788B222410BBE00651C35 /* color.htm */; };
 		0B6788B5224118AA00651C35 /* colorname.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788B4224118AA00651C35 /* colorname.htm */; };
+		0B6788B722411EE900651C35 /* char.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788B622411EE900651C35 /* char.htm */; };
 		0B779BF221EDB789001F403B /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B779BC621EDB789001F403B /* MJRefreshAutoFooter.m */; };
 		0B779BF321EDB789001F403B /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B779BC821EDB789001F403B /* MJRefreshBackFooter.m */; };
 		0B779BF421EDB789001F403B /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B779BCA21EDB789001F403B /* MJRefreshComponent.m */; };
@@ -614,6 +615,7 @@
 		0B6788AE2241007000651C35 /* iframe-demo.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "iframe-demo.html"; sourceTree = "<group>"; };
 		0B6788B222410BBE00651C35 /* color.htm */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = color.htm; sourceTree = "<group>"; };
 		0B6788B4224118AA00651C35 /* colorname.htm */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = colorname.htm; sourceTree = "<group>"; };
+		0B6788B622411EE900651C35 /* char.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = char.htm; sourceTree = "<group>"; };
 		0B779BC521EDB789001F403B /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
 		0B779BC621EDB789001F403B /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoFooter.m; sourceTree = "<group>"; };
 		0B779BC721EDB789001F403B /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
@@ -1946,6 +1948,7 @@
 				0B6788AE2241007000651C35 /* iframe-demo.html */,
 				0B6788B222410BBE00651C35 /* color.htm */,
 				0B6788B4224118AA00651C35 /* colorname.htm */,
+				0B6788B622411EE900651C35 /* char.htm */,
 			);
 			path = html;
 			sourceTree = "<group>";
@@ -2127,6 +2130,7 @@
 				0BA33CC5220B357800DF887B /* 标题.html in Resources */,
 				0BA33CC1220B1FCD00DF887B /* 表格.htm in Resources */,
 				0BA33CB9220B1E1500DF887B /* mybeard.jpeg in Resources */,
+				0B6788B722411EE900651C35 /* char.htm in Resources */,
 				0BA33CC3220B284D00DF887B /* html.plist in Resources */,
 				0BAE7F9C21D921A0009134E6 /* LaunchScreen.storyboard in Resources */,
 			);
