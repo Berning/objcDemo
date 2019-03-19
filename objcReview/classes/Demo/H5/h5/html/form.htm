@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>表单</title>
+    </head>
+    
+    <body>
+        <!--文本字段-->
+        <h1>文本</h1>
+        <form action="">
+            First name:<input type="text" name="first name" /><br/>
+            Last name:<input type="text" name="last name"/>
+                
+        </form>
+        <p><b>注意：</b>表单本身是不可见的, 一个文本字段的默认宽度是20个字符</p>
+        
+        <!--密码字段-->
+        <h1>密码</h1>
+        <form action="">
+            Username:<input type="text" name="user"/><br/>
+            Password:<input type="password" name="password"/>
+        </form>
+        <p><b>注意：</b>密码字段是隐藏的（显示为星号或者圆圈）</p>
+        
+        <!--单选按钮-->
+        <h1>单选按钮</h1>
+        <form action="">
+            <input type="radio" name="sex" value="male" />Male<br/>
+            <input type="radio" name="sex" value="female"/>Female
+            
+            <p><b>注意：</b>当点击一个单选按钮时，它就会被选中，其它的<span style="color:red;">同名按钮</span>就不会被选中</p>
+        </form>
+        
+        <!--复选框-->
+        <h1>复选框</h1>
+        <form acion="">
+            <input type="checkbox" name="vehicle" value="Bike"/>I have a bike <br/>
+            <input type="checkbox" name="vehicle" value="Car"/>I have  a car
+        </form>
+        
+        
+        <!--提交按钮-->
+        <h1>提交按钮</h1>
+        <form>
+            Username:<input type="text" name="user"/>
+            <input type="submit" value="submit"/>
+        </form>
+        
+        <!--下拉列表-->
+        <h1>下拉列表</h1>
+        <form acion="">
+            <select name="cars">
+                <option value="volvo1">volvo</option>
+                <option value="audi">audi</option>
+                <option value="BMW">BMW</option>
+                
+            </select>
+        </form>
+        
+        <!--预选下拉列表-->
+        <h1>预选下拉列表</h1>
+        <form action="">
+            <select name="cars">
+                <option value="volvo">volvo</option>
+                <option value="BMW" selected>BMW</option>
+                <option value="audi">audi</option>
+            </select>
+        </form>
+        
+        
+        <!--文本域-->
+        <h1>文本域</h1>
+        <textarea rows="30" cols="30">
+            dear friends:
+        </textarea>
+        
+        <!--按钮-->
+        <h1>按钮</h1>
+        <form action="">
+            <input type="button" value="OK"/>
+            <input type="button" value="Cancel"/>
+        </form>
+
+        
+        
+    </body>
+</html>
+
