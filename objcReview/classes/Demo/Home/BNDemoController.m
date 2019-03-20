@@ -18,6 +18,7 @@
 #import "BNNetWorkController.h"
 
 #import "BNHtmlController.h"
+#import "BNH5ViewController.h"
 
 @interface BNDemoController ()
 
@@ -64,6 +65,10 @@
         case 0:
             [self.navigationController pushViewController:[BNHtmlController new] animated:YES];
             break;
+        case 1:
+            [self.navigationController pushViewController:[BNH5ViewController new] animated:YES];
+            break;
+
             
         default:
             break;

@@ -69,8 +69,6 @@
 		0B45774221E39DDE00859F97 /* BNPeople.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B45773821E39DDE00859F97 /* BNPeople.m */; };
 		0B45774321E39DDE00859F97 /* NSMutableArray+SW.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B45773B21E39DDE00859F97 /* NSMutableArray+SW.m */; };
 		0B45774421E39DDE00859F97 /* NSObject+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B45773D21E39DDE00859F97 /* NSObject+Swizzling.m */; };
-		0B45774A21E3A0F700859F97 /* BNHtmlController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B45774721E3A0F700859F97 /* BNHtmlController.m */; };
-		0B45774B21E3A0F700859F97 /* 格式.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B45774821E3A0F700859F97 /* 格式.htm */; };
 		0B47BCAF2169350D00330C52 /* bnPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B47BCA82169350C00330C52 /* bnPerson.m */; };
 		0B47BCB02169350D00330C52 /* bnMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B47BCA92169350C00330C52 /* bnMachine.m */; };
 		0B47BCB12169350D00330C52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B47BCAB2169350C00330C52 /* main.m */; };
@@ -157,19 +155,40 @@
 		0B5BA60E21DA89B7004E79A7 /* BNBlogController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5BA60D21DA89B7004E79A7 /* BNBlogController.m */; };
 		0B5C4E38217C9B5400E0A113 /* search.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5C4E37217C9B5400E0A113 /* search.m */; };
 		0B5C4E3B217CA2F600E0A113 /* fibnociSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5C4E3A217CA2F600E0A113 /* fibnociSearch.m */; };
-		0B67888D222E92DC00651C35 /* 列表.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B67888C222E92DC00651C35 /* 列表.htm */; };
-		0B67888F222E96A500651C35 /* 列表2.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B67888E222E96A500651C35 /* 列表2.htm */; };
-		0B67889F223461D200651C35 /* 区块div.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B67889E223461D100651C35 /* 区块div.htm */; };
-		0B6788A12234656900651C35 /* 区块table布局.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788A02234656900651C35 /* 区块table布局.htm */; };
-		0B6788A32234661000651C35 /* span.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788A22234661000651C35 /* span.htm */; };
-		0B6788A522346A8000651C35 /* form.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788A422346A8000651C35 /* form.htm */; };
-		0B6788A72234FECA00651C35 /* form-examples.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788A62234FECA00651C35 /* form-examples.htm */; };
-		0B6788AB2240DA4700651C35 /* demo-form.php in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788AA2240DA4700651C35 /* demo-form.php */; };
-		0B6788AD2240FC7C00651C35 /* iframe.html in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788AC2240FC7C00651C35 /* iframe.html */; };
-		0B6788AF2241007000651C35 /* iframe-demo.html in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788AE2241007000651C35 /* iframe-demo.html */; };
-		0B6788B322410BBE00651C35 /* color.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788B222410BBE00651C35 /* color.htm */; };
-		0B6788B5224118AA00651C35 /* colorname.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788B4224118AA00651C35 /* colorname.htm */; };
-		0B6788B722411EE900651C35 /* char.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788B622411EE900651C35 /* char.htm */; };
+		0B6788E322422A8700651C35 /* BNHtmlController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6788C122422A8600651C35 /* BNHtmlController.m */; };
+		0B6788E422422A8700651C35 /* BNHtmlDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6788C322422A8600651C35 /* BNHtmlDetailController.m */; };
+		0B6788E522422A8700651C35 /* char.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788C522422A8600651C35 /* char.htm */; };
+		0B6788E622422A8700651C35 /* color.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788C622422A8600651C35 /* color.htm */; };
+		0B6788E722422A8700651C35 /* colorname.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788C722422A8600651C35 /* colorname.htm */; };
+		0B6788E822422A8700651C35 /* css.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788C822422A8600651C35 /* css.htm */; };
+		0B6788E922422A8700651C35 /* css内联样式.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788C922422A8600651C35 /* css内联样式.htm */; };
+		0B6788EA22422A8700651C35 /* css内部样式.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788CA22422A8600651C35 /* css内部样式.htm */; };
+		0B6788EB22422A8700651C35 /* css外部样式.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788CB22422A8600651C35 /* css外部样式.htm */; };
+		0B6788EC22422A8700651C35 /* demo-form.php in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788CC22422A8600651C35 /* demo-form.php */; };
+		0B6788ED22422A8700651C35 /* form-examples.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788CD22422A8600651C35 /* form-examples.htm */; };
+		0B6788EE22422A8700651C35 /* form.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788CE22422A8600651C35 /* form.htm */; };
+		0B6788EF22422A8700651C35 /* html.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788CF22422A8600651C35 /* html.plist */; };
+		0B6788F022422A8700651C35 /* iframe-demo.html in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788D022422A8600651C35 /* iframe-demo.html */; };
+		0B6788F122422A8700651C35 /* iframe.html in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788D122422A8600651C35 /* iframe.html */; };
+		0B6788F222422A8700651C35 /* mybeard.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788D222422A8600651C35 /* mybeard.jpeg */; };
+		0B6788F322422A8700651C35 /* span.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788D322422A8700651C35 /* span.htm */; };
+		0B6788F422422A8700651C35 /* 列表.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788D422422A8700651C35 /* 列表.htm */; };
+		0B6788F522422A8700651C35 /* 列表2.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788D522422A8700651C35 /* 列表2.htm */; };
+		0B6788F622422A8700651C35 /* 区块div.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788D622422A8700651C35 /* 区块div.htm */; };
+		0B6788F722422A8700651C35 /* 区块table布局.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788D722422A8700651C35 /* 区块table布局.htm */; };
+		0B6788F822422A8700651C35 /* 图像.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788D822422A8700651C35 /* 图像.htm */; };
+		0B6788F922422A8700651C35 /* 头部.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788D922422A8700651C35 /* 头部.htm */; };
+		0B6788FA22422A8700651C35 /* 标题.html in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788DA22422A8700651C35 /* 标题.html */; };
+		0B6788FB22422A8700651C35 /* 格式.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788DB22422A8700651C35 /* 格式.htm */; };
+		0B6788FC22422A8700651C35 /* 段落.html in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788DC22422A8700651C35 /* 段落.html */; };
+		0B6788FD22422A8700651C35 /* 水平线.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788DD22422A8700651C35 /* 水平线.htm */; };
+		0B6788FE22422A8700651C35 /* 表格.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788DE22422A8700651C35 /* 表格.htm */; };
+		0B6788FF22422A8700651C35 /* 链接.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788DF22422A8700651C35 /* 链接.htm */; };
+		0B67890022422A8700651C35 /* H5-video.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788E122422A8700651C35 /* H5-video.htm */; };
+		0B67890122422A8700651C35 /* italycannon.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0B6788E222422A8700651C35 /* italycannon.mp4 */; };
+		0B67890522422BEE00651C35 /* BNH5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B67890422422BEE00651C35 /* BNH5ViewController.m */; };
+		0B67890822422C1900651C35 /* BNH5DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B67890722422C1900651C35 /* BNH5DetailViewController.m */; };
+		0B67890A22422C6500651C35 /* h5.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B67890922422C6500651C35 /* h5.plist */; };
 		0B779BF221EDB789001F403B /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B779BC621EDB789001F403B /* MJRefreshAutoFooter.m */; };
 		0B779BF321EDB789001F403B /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B779BC821EDB789001F403B /* MJRefreshBackFooter.m */; };
 		0B779BF421EDB789001F403B /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B779BCA21EDB789001F403B /* MJRefreshComponent.m */; };
@@ -224,20 +243,6 @@
 		0BA33CAB220B1B1400DF887B /* BNListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA33CA1220B1B1300DF887B /* BNListView.m */; };
 		0BA33CAC220B1B1400DF887B /* BNCollectionViewCellTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA33CA4220B1B1300DF887B /* BNCollectionViewCellTest.m */; };
 		0BA33CAD220B1B1400DF887B /* BNTableViewCellTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA33CA6220B1B1300DF887B /* BNTableViewCellTest.m */; };
-		0BA33CB9220B1E1500DF887B /* mybeard.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0BA33CB8220B1E1500DF887B /* mybeard.jpeg */; };
-		0BA33CBF220B1EF700DF887B /* BNHtmlDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA33CBE220B1EF700DF887B /* BNHtmlDetailController.m */; };
-		0BA33CC1220B1FCD00DF887B /* 表格.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0BA33CC0220B1FCC00DF887B /* 表格.htm */; };
-		0BA33CC3220B284D00DF887B /* html.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0BA33CC2220B284D00DF887B /* html.plist */; };
-		0BA33CC5220B357800DF887B /* 标题.html in Resources */ = {isa = PBXBuildFile; fileRef = 0BA33CC4220B357800DF887B /* 标题.html */; };
-		0BA33CC7220B387E00DF887B /* 水平线.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0BA33CC6220B387E00DF887B /* 水平线.htm */; };
-		0BA33CC9220B39EE00DF887B /* 段落.html in Resources */ = {isa = PBXBuildFile; fileRef = 0BA33CC8220B39EE00DF887B /* 段落.html */; };
-		0BA33CCB220B40A400DF887B /* 链接.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0BA33CCA220B40A400DF887B /* 链接.htm */; };
-		0BA33CCD220B41EB00DF887B /* 图像.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0BA33CCC220B41EB00DF887B /* 图像.htm */; };
-		0BA33CCF220C30FF00DF887B /* 头部.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0BA33CCE220C30FE00DF887B /* 头部.htm */; };
-		0BA33CD1220C387800DF887B /* css.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0BA33CD0220C387800DF887B /* css.htm */; };
-		0BA33CD3220C39C500DF887B /* css内部样式.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0BA33CD2220C39C500DF887B /* css内部样式.htm */; };
-		0BA33CD5220C3A4800DF887B /* css内联样式.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0BA33CD4220C3A4800DF887B /* css内联样式.htm */; };
-		0BA33CD7220C3AF500DF887B /* css外部样式.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0BA33CD6220C3AF500DF887B /* css外部样式.htm */; };
 		0BAE7F9B21D921A0009134E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BAE7ED021D9219F009134E6 /* Assets.xcassets */; };
 		0BAE7F9C21D921A0009134E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BAE7ED121D9219F009134E6 /* LaunchScreen.storyboard */; };
 		0BAE7FEF21D921A0009134E6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0BAE7F9821D9219F009134E6 /* Info.plist */; };
@@ -409,9 +414,6 @@
 		0B45773B21E39DDE00859F97 /* NSMutableArray+SW.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SW.m"; sourceTree = "<group>"; };
 		0B45773C21E39DDE00859F97 /* NSObject+Swizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzling.h"; sourceTree = "<group>"; };
 		0B45773D21E39DDE00859F97 /* NSObject+Swizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzling.m"; sourceTree = "<group>"; };
-		0B45774621E3A0F700859F97 /* BNHtmlController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNHtmlController.h; sourceTree = "<group>"; };
-		0B45774721E3A0F700859F97 /* BNHtmlController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNHtmlController.m; sourceTree = "<group>"; };
-		0B45774821E3A0F700859F97 /* 格式.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "格式.htm"; sourceTree = "<group>"; };
 		0B47BAA22169180F00330C52 /* objcReview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = objcReview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B47BC962169333400330C52 /* ratainCycle */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ratainCycle; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B47BCA82169350C00330C52 /* bnPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bnPerson.m; sourceTree = "<group>"; };
@@ -603,19 +605,44 @@
 		0B5C4E37217C9B5400E0A113 /* search.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = search.m; sourceTree = "<group>"; };
 		0B5C4E39217CA2F600E0A113 /* fibnociSearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fibnociSearch.h; sourceTree = "<group>"; };
 		0B5C4E3A217CA2F600E0A113 /* fibnociSearch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fibnociSearch.m; sourceTree = "<group>"; };
-		0B67888C222E92DC00651C35 /* 列表.htm */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "列表.htm"; sourceTree = "<group>"; };
-		0B67888E222E96A500651C35 /* 列表2.htm */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "列表2.htm"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.html; };
-		0B67889E223461D100651C35 /* 区块div.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "区块div.htm"; sourceTree = "<group>"; };
-		0B6788A02234656900651C35 /* 区块table布局.htm */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "区块table布局.htm"; sourceTree = "<group>"; };
-		0B6788A22234661000651C35 /* span.htm */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = span.htm; sourceTree = "<group>"; };
-		0B6788A422346A8000651C35 /* form.htm */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = form.htm; sourceTree = "<group>"; };
-		0B6788A62234FECA00651C35 /* form-examples.htm */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "form-examples.htm"; sourceTree = "<group>"; };
-		0B6788AA2240DA4700651C35 /* demo-form.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = "demo-form.php"; sourceTree = "<group>"; };
-		0B6788AC2240FC7C00651C35 /* iframe.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = iframe.html; sourceTree = "<group>"; };
-		0B6788AE2241007000651C35 /* iframe-demo.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "iframe-demo.html"; sourceTree = "<group>"; };
-		0B6788B222410BBE00651C35 /* color.htm */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = color.htm; sourceTree = "<group>"; };
-		0B6788B4224118AA00651C35 /* colorname.htm */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = colorname.htm; sourceTree = "<group>"; };
-		0B6788B622411EE900651C35 /* char.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = char.htm; sourceTree = "<group>"; };
+		0B6788C022422A8600651C35 /* BNHtmlController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNHtmlController.h; sourceTree = "<group>"; };
+		0B6788C122422A8600651C35 /* BNHtmlController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNHtmlController.m; sourceTree = "<group>"; };
+		0B6788C222422A8600651C35 /* BNHtmlDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNHtmlDetailController.h; sourceTree = "<group>"; };
+		0B6788C322422A8600651C35 /* BNHtmlDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNHtmlDetailController.m; sourceTree = "<group>"; };
+		0B6788C522422A8600651C35 /* char.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = char.htm; sourceTree = "<group>"; };
+		0B6788C622422A8600651C35 /* color.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = color.htm; sourceTree = "<group>"; };
+		0B6788C722422A8600651C35 /* colorname.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = colorname.htm; sourceTree = "<group>"; };
+		0B6788C822422A8600651C35 /* css.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = css.htm; sourceTree = "<group>"; };
+		0B6788C922422A8600651C35 /* css内联样式.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "css内联样式.htm"; sourceTree = "<group>"; };
+		0B6788CA22422A8600651C35 /* css内部样式.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "css内部样式.htm"; sourceTree = "<group>"; };
+		0B6788CB22422A8600651C35 /* css外部样式.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "css外部样式.htm"; sourceTree = "<group>"; };
+		0B6788CC22422A8600651C35 /* demo-form.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = "demo-form.php"; sourceTree = "<group>"; };
+		0B6788CD22422A8600651C35 /* form-examples.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "form-examples.htm"; sourceTree = "<group>"; };
+		0B6788CE22422A8600651C35 /* form.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = form.htm; sourceTree = "<group>"; };
+		0B6788CF22422A8600651C35 /* html.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = html.plist; sourceTree = "<group>"; };
+		0B6788D022422A8600651C35 /* iframe-demo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "iframe-demo.html"; sourceTree = "<group>"; };
+		0B6788D122422A8600651C35 /* iframe.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = iframe.html; sourceTree = "<group>"; };
+		0B6788D222422A8600651C35 /* mybeard.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mybeard.jpeg; sourceTree = "<group>"; };
+		0B6788D322422A8700651C35 /* span.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = span.htm; sourceTree = "<group>"; };
+		0B6788D422422A8700651C35 /* 列表.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "列表.htm"; sourceTree = "<group>"; };
+		0B6788D522422A8700651C35 /* 列表2.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "列表2.htm"; sourceTree = "<group>"; };
+		0B6788D622422A8700651C35 /* 区块div.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "区块div.htm"; sourceTree = "<group>"; };
+		0B6788D722422A8700651C35 /* 区块table布局.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "区块table布局.htm"; sourceTree = "<group>"; };
+		0B6788D822422A8700651C35 /* 图像.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "图像.htm"; sourceTree = "<group>"; };
+		0B6788D922422A8700651C35 /* 头部.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "头部.htm"; sourceTree = "<group>"; };
+		0B6788DA22422A8700651C35 /* 标题.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "标题.html"; sourceTree = "<group>"; };
+		0B6788DB22422A8700651C35 /* 格式.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "格式.htm"; sourceTree = "<group>"; };
+		0B6788DC22422A8700651C35 /* 段落.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "段落.html"; sourceTree = "<group>"; };
+		0B6788DD22422A8700651C35 /* 水平线.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "水平线.htm"; sourceTree = "<group>"; };
+		0B6788DE22422A8700651C35 /* 表格.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "表格.htm"; sourceTree = "<group>"; };
+		0B6788DF22422A8700651C35 /* 链接.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "链接.htm"; sourceTree = "<group>"; };
+		0B6788E122422A8700651C35 /* H5-video.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "H5-video.htm"; sourceTree = "<group>"; };
+		0B6788E222422A8700651C35 /* italycannon.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = italycannon.mp4; sourceTree = "<group>"; };
+		0B67890322422BEE00651C35 /* BNH5ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNH5ViewController.h; sourceTree = "<group>"; };
+		0B67890422422BEE00651C35 /* BNH5ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNH5ViewController.m; sourceTree = "<group>"; };
+		0B67890622422C1900651C35 /* BNH5DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNH5DetailViewController.h; sourceTree = "<group>"; };
+		0B67890722422C1900651C35 /* BNH5DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNH5DetailViewController.m; sourceTree = "<group>"; };
+		0B67890922422C6500651C35 /* h5.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = h5.plist; sourceTree = "<group>"; };
 		0B779BC521EDB789001F403B /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
 		0B779BC621EDB789001F403B /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoFooter.m; sourceTree = "<group>"; };
 		0B779BC721EDB789001F403B /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
@@ -730,21 +757,6 @@
 		0BA33CA4220B1B1300DF887B /* BNCollectionViewCellTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNCollectionViewCellTest.m; sourceTree = "<group>"; };
 		0BA33CA5220B1B1300DF887B /* BNTableViewCellTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNTableViewCellTest.h; sourceTree = "<group>"; };
 		0BA33CA6220B1B1300DF887B /* BNTableViewCellTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNTableViewCellTest.m; sourceTree = "<group>"; };
-		0BA33CB8220B1E1500DF887B /* mybeard.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mybeard.jpeg; sourceTree = "<group>"; };
-		0BA33CBD220B1EF600DF887B /* BNHtmlDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNHtmlDetailController.h; sourceTree = "<group>"; };
-		0BA33CBE220B1EF700DF887B /* BNHtmlDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNHtmlDetailController.m; sourceTree = "<group>"; };
-		0BA33CC0220B1FCC00DF887B /* 表格.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "表格.htm"; sourceTree = "<group>"; };
-		0BA33CC2220B284D00DF887B /* html.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = html.plist; sourceTree = "<group>"; };
-		0BA33CC4220B357800DF887B /* 标题.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "标题.html"; sourceTree = "<group>"; };
-		0BA33CC6220B387E00DF887B /* 水平线.htm */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "水平线.htm"; sourceTree = "<group>"; };
-		0BA33CC8220B39EE00DF887B /* 段落.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "段落.html"; sourceTree = "<group>"; };
-		0BA33CCA220B40A400DF887B /* 链接.htm */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "链接.htm"; sourceTree = "<group>"; };
-		0BA33CCC220B41EB00DF887B /* 图像.htm */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "图像.htm"; sourceTree = "<group>"; };
-		0BA33CCE220C30FE00DF887B /* 头部.htm */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "头部.htm"; sourceTree = "<group>"; };
-		0BA33CD0220C387800DF887B /* css.htm */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = css.htm; sourceTree = "<group>"; };
-		0BA33CD2220C39C500DF887B /* css内部样式.htm */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "css内部样式.htm"; sourceTree = "<group>"; };
-		0BA33CD4220C3A4800DF887B /* css内联样式.htm */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "css内联样式.htm"; sourceTree = "<group>"; };
-		0BA33CD6220C3AF500DF887B /* css外部样式.htm */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "css外部样式.htm"; sourceTree = "<group>"; };
 		0BAE7ED021D9219F009134E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0BAE7ED221D9219F009134E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0BAE7F9721D9219F009134E6 /* commands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = commands.h; sourceTree = "<group>"; };
@@ -1187,19 +1199,6 @@
 			path = Swizzling;
 			sourceTree = "<group>";
 		};
-		0B45774521E3A0F700859F97 /* h5 */ = {
-			isa = PBXGroup;
-			children = (
-				0B45774621E3A0F700859F97 /* BNHtmlController.h */,
-				0B45774721E3A0F700859F97 /* BNHtmlController.m */,
-				0BA33CBD220B1EF600DF887B /* BNHtmlDetailController.h */,
-				0BA33CBE220B1EF700DF887B /* BNHtmlDetailController.m */,
-				0BA33CAE220B1BC100DF887B /* html */,
-			);
-			name = h5;
-			path = H5/h5;
-			sourceTree = "<group>";
-		};
 		0B47BA8A216915B400330C52 = {
 			isa = PBXGroup;
 			children = (
@@ -1326,12 +1325,12 @@
 		0B5BA4DB21DA7A23004E79A7 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				0B6788BE22422A8600651C35 /* Web */,
 				0BA33BDE21F88DF800DF887B /* Foundation */,
 				0B5BA50021DA7A23004E79A7 /* mutableThread */,
 				0B5BA51221DA7A24004E79A7 /* network */,
 				0B4576EC21E3952C00859F97 /* DataBase */,
 				0B387AC921E343EF001A0ED7 /* UI */,
-				0B45774521E3A0F700859F97 /* h5 */,
 				0B45772821E39DDE00859F97 /* runtime */,
 				0B5BA4DC21DA7A23004E79A7 /* aplication(Delegate) */,
 				0B5BA4E021DA7A23004E79A7 /* C */,
@@ -1636,6 +1635,83 @@
 			path = Tab;
 			sourceTree = "<group>";
 		};
+		0B6788BE22422A8600651C35 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				0B6788E022422A8700651C35 /* html5 */,
+				0B6788BF22422A8600651C35 /* html */,
+			);
+			path = Web;
+			sourceTree = "<group>";
+		};
+		0B6788BF22422A8600651C35 /* html */ = {
+			isa = PBXGroup;
+			children = (
+				0B6788C022422A8600651C35 /* BNHtmlController.h */,
+				0B6788C122422A8600651C35 /* BNHtmlController.m */,
+				0B6788C222422A8600651C35 /* BNHtmlDetailController.h */,
+				0B6788C322422A8600651C35 /* BNHtmlDetailController.m */,
+				0B6788C422422A8600651C35 /* srcs */,
+			);
+			path = html;
+			sourceTree = "<group>";
+		};
+		0B6788C422422A8600651C35 /* srcs */ = {
+			isa = PBXGroup;
+			children = (
+				0B6788C522422A8600651C35 /* char.htm */,
+				0B6788C622422A8600651C35 /* color.htm */,
+				0B6788C722422A8600651C35 /* colorname.htm */,
+				0B6788C822422A8600651C35 /* css.htm */,
+				0B6788C922422A8600651C35 /* css内联样式.htm */,
+				0B6788CA22422A8600651C35 /* css内部样式.htm */,
+				0B6788CB22422A8600651C35 /* css外部样式.htm */,
+				0B6788CC22422A8600651C35 /* demo-form.php */,
+				0B6788CD22422A8600651C35 /* form-examples.htm */,
+				0B6788CE22422A8600651C35 /* form.htm */,
+				0B6788CF22422A8600651C35 /* html.plist */,
+				0B6788D022422A8600651C35 /* iframe-demo.html */,
+				0B6788D122422A8600651C35 /* iframe.html */,
+				0B6788D222422A8600651C35 /* mybeard.jpeg */,
+				0B6788D322422A8700651C35 /* span.htm */,
+				0B6788D422422A8700651C35 /* 列表.htm */,
+				0B6788D522422A8700651C35 /* 列表2.htm */,
+				0B6788D622422A8700651C35 /* 区块div.htm */,
+				0B6788D722422A8700651C35 /* 区块table布局.htm */,
+				0B6788D822422A8700651C35 /* 图像.htm */,
+				0B6788D922422A8700651C35 /* 头部.htm */,
+				0B6788DA22422A8700651C35 /* 标题.html */,
+				0B6788DB22422A8700651C35 /* 格式.htm */,
+				0B6788DC22422A8700651C35 /* 段落.html */,
+				0B6788DD22422A8700651C35 /* 水平线.htm */,
+				0B6788DE22422A8700651C35 /* 表格.htm */,
+				0B6788DF22422A8700651C35 /* 链接.htm */,
+			);
+			path = srcs;
+			sourceTree = "<group>";
+		};
+		0B6788E022422A8700651C35 /* html5 */ = {
+			isa = PBXGroup;
+			children = (
+				0B67890322422BEE00651C35 /* BNH5ViewController.h */,
+				0B67890422422BEE00651C35 /* BNH5ViewController.m */,
+				0B67890622422C1900651C35 /* BNH5DetailViewController.h */,
+				0B67890722422C1900651C35 /* BNH5DetailViewController.m */,
+				0B67890222422B4E00651C35 /* srcs */,
+			);
+			path = html5;
+			sourceTree = "<group>";
+		};
+		0B67890222422B4E00651C35 /* srcs */ = {
+			isa = PBXGroup;
+			children = (
+				0B67890922422C6500651C35 /* h5.plist */,
+				0B6788E122422A8700651C35 /* H5-video.htm */,
+				0B6788E222422A8700651C35 /* italycannon.mp4 */,
+			);
+			path = srcs;
+			sourceTree = "<group>";
+		};
 		0B779BC121ED5CAB001F403B /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -1919,40 +1995,6 @@
 			path = cell;
 			sourceTree = "<group>";
 		};
-		0BA33CAE220B1BC100DF887B /* html */ = {
-			isa = PBXGroup;
-			children = (
-				0BA33CC2220B284D00DF887B /* html.plist */,
-				0BA33CB8220B1E1500DF887B /* mybeard.jpeg */,
-				0BA33CC4220B357800DF887B /* 标题.html */,
-				0BA33CC6220B387E00DF887B /* 水平线.htm */,
-				0BA33CC8220B39EE00DF887B /* 段落.html */,
-				0B45774821E3A0F700859F97 /* 格式.htm */,
-				0BA33CCA220B40A400DF887B /* 链接.htm */,
-				0BA33CCE220C30FE00DF887B /* 头部.htm */,
-				0BA33CD0220C387800DF887B /* css.htm */,
-				0BA33CD4220C3A4800DF887B /* css内联样式.htm */,
-				0BA33CD2220C39C500DF887B /* css内部样式.htm */,
-				0BA33CD6220C3AF500DF887B /* css外部样式.htm */,
-				0BA33CCC220B41EB00DF887B /* 图像.htm */,
-				0BA33CC0220B1FCC00DF887B /* 表格.htm */,
-				0B67888C222E92DC00651C35 /* 列表.htm */,
-				0B67888E222E96A500651C35 /* 列表2.htm */,
-				0B67889E223461D100651C35 /* 区块div.htm */,
-				0B6788A02234656900651C35 /* 区块table布局.htm */,
-				0B6788A22234661000651C35 /* span.htm */,
-				0B6788A422346A8000651C35 /* form.htm */,
-				0B6788A62234FECA00651C35 /* form-examples.htm */,
-				0B6788AA2240DA4700651C35 /* demo-form.php */,
-				0B6788AC2240FC7C00651C35 /* iframe.html */,
-				0B6788AE2241007000651C35 /* iframe-demo.html */,
-				0B6788B222410BBE00651C35 /* color.htm */,
-				0B6788B4224118AA00651C35 /* colorname.htm */,
-				0B6788B622411EE900651C35 /* char.htm */,
-			);
-			path = html;
-			sourceTree = "<group>";
-		};
 		0BAE7ECF21D9219F009134E6 /* objcReview */ = {
 			isa = PBXGroup;
 			children = (
@@ -2101,38 +2143,41 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B67888D222E92DC00651C35 /* 列表.htm in Resources */,
-				0B6788AF2241007000651C35 /* iframe-demo.html in Resources */,
-				0B6788A32234661000651C35 /* span.htm in Resources */,
-				0BA33CD3220C39C500DF887B /* css内部样式.htm in Resources */,
-				0B6788A522346A8000651C35 /* form.htm in Resources */,
-				0BA33CCB220B40A400DF887B /* 链接.htm in Resources */,
-				0BA33CC9220B39EE00DF887B /* 段落.html in Resources */,
-				0B67889F223461D200651C35 /* 区块div.htm in Resources */,
-				0BA33CCD220B41EB00DF887B /* 图像.htm in Resources */,
+				0B6788FF22422A8700651C35 /* 链接.htm in Resources */,
+				0B67890022422A8700651C35 /* H5-video.htm in Resources */,
+				0B6788F822422A8700651C35 /* 图像.htm in Resources */,
+				0B6788E822422A8700651C35 /* css.htm in Resources */,
+				0B6788FC22422A8700651C35 /* 段落.html in Resources */,
+				0B6788F522422A8700651C35 /* 列表2.htm in Resources */,
+				0B6788EC22422A8700651C35 /* demo-form.php in Resources */,
+				0B6788FB22422A8700651C35 /* 格式.htm in Resources */,
 				0B387AFB21E343EF001A0ED7 /* Paths.webarchive in Resources */,
+				0B6788E622422A8700651C35 /* color.htm in Resources */,
+				0B6788F622422A8700651C35 /* 区块div.htm in Resources */,
+				0B6788EA22422A8700651C35 /* css内部样式.htm in Resources */,
+				0B67890122422A8700651C35 /* italycannon.mp4 in Resources */,
+				0B67890A22422C6500651C35 /* h5.plist in Resources */,
+				0B6788E522422A8700651C35 /* char.htm in Resources */,
+				0B6788F722422A8700651C35 /* 区块table布局.htm in Resources */,
+				0B6788FD22422A8700651C35 /* 水平线.htm in Resources */,
 				0B779C0021EDB789001F403B /* MJRefresh.bundle in Resources */,
-				0BA33CD7220C3AF500DF887B /* css外部样式.htm in Resources */,
-				0BA33CCF220C30FF00DF887B /* 头部.htm in Resources */,
-				0B67888F222E96A500651C35 /* 列表2.htm in Resources */,
+				0B6788F222422A8700651C35 /* mybeard.jpeg in Resources */,
+				0B6788E722422A8700651C35 /* colorname.htm in Resources */,
+				0B6788F922422A8700651C35 /* 头部.htm in Resources */,
+				0B6788E922422A8700651C35 /* css内联样式.htm in Resources */,
+				0B6788FA22422A8700651C35 /* 标题.html in Resources */,
+				0B6788EF22422A8700651C35 /* html.plist in Resources */,
+				0B6788F422422A8700651C35 /* 列表.htm in Resources */,
 				0BAE7FEF21D921A0009134E6 /* Info.plist in Resources */,
-				0B6788B322410BBE00651C35 /* color.htm in Resources */,
-				0B6788AD2240FC7C00651C35 /* iframe.html in Resources */,
-				0B6788AB2240DA4700651C35 /* demo-form.php in Resources */,
-				0B6788B5224118AA00651C35 /* colorname.htm in Resources */,
-				0B6788A12234656900651C35 /* 区块table布局.htm in Resources */,
-				0BA33CD1220C387800DF887B /* css.htm in Resources */,
-				0B6788A72234FECA00651C35 /* form-examples.htm in Resources */,
-				0B45774B21E3A0F700859F97 /* 格式.htm in Resources */,
-				0BA33CD5220C3A4800DF887B /* css内联样式.htm in Resources */,
-				0BA33CC7220B387E00DF887B /* 水平线.htm in Resources */,
 				0BAE7F9B21D921A0009134E6 /* Assets.xcassets in Resources */,
-				0BA33CC5220B357800DF887B /* 标题.html in Resources */,
-				0BA33CC1220B1FCD00DF887B /* 表格.htm in Resources */,
-				0BA33CB9220B1E1500DF887B /* mybeard.jpeg in Resources */,
-				0B6788B722411EE900651C35 /* char.htm in Resources */,
-				0BA33CC3220B284D00DF887B /* html.plist in Resources */,
+				0B6788F322422A8700651C35 /* span.htm in Resources */,
 				0BAE7F9C21D921A0009134E6 /* LaunchScreen.storyboard in Resources */,
+				0B6788F022422A8700651C35 /* iframe-demo.html in Resources */,
+				0B6788ED22422A8700651C35 /* form-examples.htm in Resources */,
+				0B6788EE22422A8700651C35 /* form.htm in Resources */,
+				0B6788FE22422A8700651C35 /* 表格.htm in Resources */,
+				0B6788F122422A8700651C35 /* iframe.html in Resources */,
+				0B6788EB22422A8700651C35 /* css外部样式.htm in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2169,12 +2214,11 @@
 				0BA33C0421F9FB7300DF887B /* NSURLConnectionTest.m in Sources */,
 				0B5BA5CF21DA7A24004E79A7 /* AFNetworkReachabilityManager.m in Sources */,
 				0BA33C2F21FA348700DF887B /* BNOptionButton.m in Sources */,
-				0BA33CBF220B1EF700DF887B /* BNHtmlDetailController.m in Sources */,
+				0B6788E422422A8700651C35 /* BNHtmlDetailController.m in Sources */,
 				0B779BFD21EDB789001F403B /* MJRefreshGifHeader.m in Sources */,
 				0B0B033321E4E7790096898F /* bnSubView.m in Sources */,
 				0BA33C4121FB73FD00DF887B /* UIColor+BN.m in Sources */,
 				0B0B032E21E4E7790096898F /* NSMutableArray+Sort.m in Sources */,
-				0B45774A21E3A0F700859F97 /* BNHtmlController.m in Sources */,
 				0BA33BEB21F8927A00DF887B /* NSArrayTest.m in Sources */,
 				0B5BA5CE21DA7A24004E79A7 /* AFHTTPSessionManager.m in Sources */,
 				0B5BA5BF21DA7A24004E79A7 /* BNThreadController.m in Sources */,
@@ -2327,6 +2371,7 @@
 				0B5BA5FD21DA7A24004E79A7 /* BNDateTool.m in Sources */,
 				0B45773E21E39DDE00859F97 /* NSMutableArray+properties.m in Sources */,
 				0B45774021E39DDE00859F97 /* BNBall.m in Sources */,
+				0B67890822422C1900651C35 /* BNH5DetailViewController.m in Sources */,
 				0B387AB421DAAADF001A0ED7 /* BNQuestionViewController.m in Sources */,
 				0B5BA5C821DA7A24004E79A7 /* UIButton+BN.m in Sources */,
 				0B0B030021E4DDE90096898F /* BNAppCollectionViewCell.m in Sources */,
@@ -2337,7 +2382,9 @@
 				0B0B032621E4E7790096898F /* bnCollectionViewController.m in Sources */,
 				0B387AF121E343EF001A0ED7 /* BNProgressView.m in Sources */,
 				0BA33BF421F8935100DF887B /* NSStringTest.m in Sources */,
+				0B6788E322422A8700651C35 /* BNHtmlController.m in Sources */,
 				0BA33CA9220B1B1400DF887B /* BNViewManagerTest.m in Sources */,
+				0B67890522422BEE00651C35 /* BNH5ViewController.m in Sources */,
 				0B387AF321E343EF001A0ED7 /* BNLockView.m in Sources */,
 				0B5BA5C221DA7A24004E79A7 /* UIViewControllerTest.m in Sources */,
 				0B0B032D21E4E7790096898F /* BNLotterySQLite.m in Sources */,

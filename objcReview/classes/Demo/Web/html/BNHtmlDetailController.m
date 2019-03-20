@@ -22,7 +22,7 @@
     NSString *file=[self.title stringByAppendingString:@".html"];
 
     if ( ![[NSBundle mainBundle] URLForResource:file withExtension:nil]) {
-        BNLog(@"no file:%@",file);
+//        BNLog(@"no file:%@",file);
         file=[self.title stringByAppendingString:@".htm"];
     }
     
@@ -38,7 +38,7 @@
     
     // 发送请求加载网页
     [webView loadRequest:request];
-    NSLog(@"%@=====%@",[NSBundle mainBundle],[NSBundle mainBundle].resourceURL);
+//    NSLog(@"%@=====%@",[NSBundle mainBundle],[NSBundle mainBundle].resourceURL);
     
 }
 
