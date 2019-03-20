@@ -189,6 +189,7 @@
 		0B67890522422BEE00651C35 /* BNH5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B67890422422BEE00651C35 /* BNH5ViewController.m */; };
 		0B67890822422C1900651C35 /* BNH5DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B67890722422C1900651C35 /* BNH5DetailViewController.m */; };
 		0B67890A22422C6500651C35 /* h5.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B67890922422C6500651C35 /* h5.plist */; };
+		0B67890C22423B0E00651C35 /* newElement.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0B67890B22423B0E00651C35 /* newElement.htm */; };
 		0B779BF221EDB789001F403B /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B779BC621EDB789001F403B /* MJRefreshAutoFooter.m */; };
 		0B779BF321EDB789001F403B /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B779BC821EDB789001F403B /* MJRefreshBackFooter.m */; };
 		0B779BF421EDB789001F403B /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B779BCA21EDB789001F403B /* MJRefreshComponent.m */; };
@@ -643,6 +644,7 @@
 		0B67890622422C1900651C35 /* BNH5DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNH5DetailViewController.h; sourceTree = "<group>"; };
 		0B67890722422C1900651C35 /* BNH5DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNH5DetailViewController.m; sourceTree = "<group>"; };
 		0B67890922422C6500651C35 /* h5.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = h5.plist; sourceTree = "<group>"; };
+		0B67890B22423B0E00651C35 /* newElement.htm */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = newElement.htm; sourceTree = "<group>"; };
 		0B779BC521EDB789001F403B /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
 		0B779BC621EDB789001F403B /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoFooter.m; sourceTree = "<group>"; };
 		0B779BC721EDB789001F403B /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
@@ -1708,6 +1710,7 @@
 				0B67890922422C6500651C35 /* h5.plist */,
 				0B6788E122422A8700651C35 /* H5-video.htm */,
 				0B6788E222422A8700651C35 /* italycannon.mp4 */,
+				0B67890B22423B0E00651C35 /* newElement.htm */,
 			);
 			path = srcs;
 			sourceTree = "<group>";
@@ -2176,6 +2179,7 @@
 				0B6788ED22422A8700651C35 /* form-examples.htm in Resources */,
 				0B6788EE22422A8700651C35 /* form.htm in Resources */,
 				0B6788FE22422A8700651C35 /* 表格.htm in Resources */,
+				0B67890C22423B0E00651C35 /* newElement.htm in Resources */,
 				0B6788F122422A8700651C35 /* iframe.html in Resources */,
 				0B6788EB22422A8700651C35 /* css外部样式.htm in Resources */,
 			);
