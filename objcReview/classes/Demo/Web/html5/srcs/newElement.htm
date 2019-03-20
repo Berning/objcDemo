@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>H5-newElement</title>
+        <script>document.createElement("ezs")</script>
+        
+        <p>我们可以使用 Sjoerd Visscher 创建的 "HTML5 Enabling JavaScript", " shiv" 来解决该问题</p>
+
+        <!--[if lt IE 9]>
+         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+         <![endif]-->
+
+        <p>runoob静态库</p>
+        <!--[if lt IE 9]>
+         <script src="https://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+         <![endif]-->
+        
+        <style>
+            ezs{
+                display:block;
+                background-color:#ddd;
+                padding:50px;
+                font-size:30px;
+            }
+        </style>
+        
+    </head>
+    
+    <body>
+        <h1>我的标题</h1>
+        <p style="background-color:lightgray;color:green;">我的段落</p>
+        <ezs>
+            我的自定义标签。
+        </ezs>
+        
+    </body>
+</html>
