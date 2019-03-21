@@ -1,0 +1,22 @@
+<!DOCTYOE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>canvas</title>
+    </head>
+    
+    <body>
+        
+        <canvas id="rect">browser do not support canvas.</canvas>
+        <!--js-->
+        
+        <script>
+            var c=document.getElementById('rect');
+            var ctx=c.getContext('2d');
+            ctx.fillStyle='#F00';
+            ctx.fillRect(0,0,80,120);
+            </script>
+        
+    </body>
+    
+</html>
