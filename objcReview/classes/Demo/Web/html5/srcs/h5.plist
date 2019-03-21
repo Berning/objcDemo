@@ -7,5 +7,7 @@
 	<string>canvas</string>
 	<string>audio</string>
 	<string>source</string>
+	<string>embed</string>
+	<string></string>
 </array>
 </plist>
