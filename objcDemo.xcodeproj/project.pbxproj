@@ -249,6 +249,7 @@
 		0BAE7FEF21D921A0009134E6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0BAE7F9821D9219F009134E6 /* Info.plist */; };
 		0BAE7FF021D921A0009134E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BAE7F9921D9219F009134E6 /* main.m */; };
 		0BC742CF2243C106006847A5 /* canvas.html in Resources */ = {isa = PBXBuildFile; fileRef = 0BC742CE2243C106006847A5 /* canvas.html */; };
+		0BC742D12243C73C006847A5 /* audio.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0BC742D02243C73C006847A5 /* audio.htm */; };
 		0BE3DDE3216CC03600882E05 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3DDE2216CC03600882E05 /* main.m */; };
 		0BE3DDF2216CC06200882E05 /* common.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3DDE9216CC06200882E05 /* common.m */; };
 		0BE3DDF3216CC06200882E05 /* stringHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3DDEB216CC06200882E05 /* stringHandle.m */; };
@@ -767,6 +768,8 @@
 		0BAE7F9921D9219F009134E6 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0BAE7F9A21D921A0009134E6 /* objc-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "objc-prefix.pch"; sourceTree = "<group>"; };
 		0BC742CE2243C106006847A5 /* canvas.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = canvas.html; sourceTree = "<group>"; };
+		0BC742D02243C73C006847A5 /* audio.htm */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = audio.htm; sourceTree = "<group>"; };
+		0BC742D22243C7C7006847A5 /* horse.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = horse.ogg; sourceTree = "<group>"; };
 		0BE3DDE0216CC03500882E05 /* algorithm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = algorithm; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BE3DDE2216CC03600882E05 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0BE3DDE8216CC06200882E05 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
@@ -1714,6 +1717,8 @@
 				0B6788E222422A8700651C35 /* italycannon.mp4 */,
 				0B67890B22423B0E00651C35 /* newElement.htm */,
 				0BC742CE2243C106006847A5 /* canvas.html */,
+				0BC742D02243C73C006847A5 /* audio.htm */,
+				0BC742D22243C7C7006847A5 /* horse.ogg */,
 			);
 			path = srcs;
 			sourceTree = "<group>";
@@ -2165,6 +2170,7 @@
 				0B67890122422A8700651C35 /* italycannon.mp4 in Resources */,
 				0B67890A22422C6500651C35 /* h5.plist in Resources */,
 				0B6788E522422A8700651C35 /* char.htm in Resources */,
+				0BC742D12243C73C006847A5 /* audio.htm in Resources */,
 				0B6788F722422A8700651C35 /* 区块table布局.htm in Resources */,
 				0B6788FD22422A8700651C35 /* 水平线.htm in Resources */,
 				0B779C0021EDB789001F403B /* MJRefresh.bundle in Resources */,
