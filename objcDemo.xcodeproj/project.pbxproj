@@ -252,6 +252,8 @@
 		0BC742D12243C73C006847A5 /* audio.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0BC742D02243C73C006847A5 /* audio.htm */; };
 		0BC742D42243C972006847A5 /* source.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0BC742D32243C972006847A5 /* source.htm */; };
 		0BC742D62243CC7D006847A5 /* embed.html in Resources */ = {isa = PBXBuildFile; fileRef = 0BC742D52243CC7D006847A5 /* embed.html */; };
+		0BC742D82243D262006847A5 /* track.html in Resources */ = {isa = PBXBuildFile; fileRef = 0BC742D72243D262006847A5 /* track.html */; };
+		0BC742DC2243D652006847A5 /* zim.srt in Resources */ = {isa = PBXBuildFile; fileRef = 0BC742DB2243D652006847A5 /* zim.srt */; };
 		0BE3DDE3216CC03600882E05 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3DDE2216CC03600882E05 /* main.m */; };
 		0BE3DDF2216CC06200882E05 /* common.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3DDE9216CC06200882E05 /* common.m */; };
 		0BE3DDF3216CC06200882E05 /* stringHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3DDEB216CC06200882E05 /* stringHandle.m */; };
@@ -774,6 +776,8 @@
 		0BC742D22243C7C7006847A5 /* horse.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = horse.ogg; sourceTree = "<group>"; };
 		0BC742D32243C972006847A5 /* source.htm */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = source.htm; sourceTree = "<group>"; };
 		0BC742D52243CC7D006847A5 /* embed.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = embed.html; sourceTree = "<group>"; };
+		0BC742D72243D262006847A5 /* track.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = track.html; sourceTree = "<group>"; };
+		0BC742DB2243D652006847A5 /* zim.srt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = zim.srt; sourceTree = "<group>"; };
 		0BE3DDE0216CC03500882E05 /* algorithm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = algorithm; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BE3DDE2216CC03600882E05 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0BE3DDE8216CC06200882E05 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
@@ -1725,6 +1729,8 @@
 				0BC742D22243C7C7006847A5 /* horse.ogg */,
 				0BC742D32243C972006847A5 /* source.htm */,
 				0BC742D52243CC7D006847A5 /* embed.html */,
+				0BC742D72243D262006847A5 /* track.html */,
+				0BC742DB2243D652006847A5 /* zim.srt */,
 			);
 			path = srcs;
 			sourceTree = "<group>";
@@ -2189,12 +2195,14 @@
 				0B6788EF22422A8700651C35 /* html.plist in Resources */,
 				0B6788F422422A8700651C35 /* 列表.htm in Resources */,
 				0BC742D42243C972006847A5 /* source.htm in Resources */,
+				0BC742D82243D262006847A5 /* track.html in Resources */,
 				0BAE7FEF21D921A0009134E6 /* Info.plist in Resources */,
 				0BAE7F9B21D921A0009134E6 /* Assets.xcassets in Resources */,
 				0B6788F322422A8700651C35 /* span.htm in Resources */,
 				0BAE7F9C21D921A0009134E6 /* LaunchScreen.storyboard in Resources */,
 				0B6788F022422A8700651C35 /* iframe-demo.html in Resources */,
 				0B6788ED22422A8700651C35 /* form-examples.htm in Resources */,
+				0BC742DC2243D652006847A5 /* zim.srt in Resources */,
 				0B6788EE22422A8700651C35 /* form.htm in Resources */,
 				0B6788FE22422A8700651C35 /* 表格.htm in Resources */,
 				0B67890C22423B0E00651C35 /* newElement.htm in Resources */,

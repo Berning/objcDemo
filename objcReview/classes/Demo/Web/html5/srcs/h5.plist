@@ -8,6 +8,7 @@
 	<string>audio</string>
 	<string>source</string>
 	<string>embed</string>
+	<string>track</string>
 	<string></string>
 </array>
 </plist>
