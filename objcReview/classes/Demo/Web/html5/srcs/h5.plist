@@ -6,5 +6,6 @@
 	<string>newElement</string>
 	<string>canvas</string>
 	<string>audio</string>
+	<string>source</string>
 </array>
 </plist>
