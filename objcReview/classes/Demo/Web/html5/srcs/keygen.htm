@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>keygen</title>
+        </head>
+    <body>
+        
+        <!--<keygen> 标签规定用于表单的密钥对生成器字段。
+         当提交表单时，私钥存储在本地，公钥发送到服务器。
+         -->
+        <form action="demo-form.php" method="get">
+            username:<input type="text" name="usr_name"/>
+            secret:<keygen name="security"/>
+            <input type="submit">
+                
+        </form>
+        
+        </body>
+    </html>

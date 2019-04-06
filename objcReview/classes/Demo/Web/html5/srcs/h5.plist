@@ -10,5 +10,11 @@
 	<string>embed</string>
 	<string>track</string>
 	<string>dataList</string>
+	<string>keygen</string>
+	<string>output</string>
+	<string>article</string>
+	<string>aside</string>
+	<string>bdi</string>
+	<string></string>
 </array>
 </plist>
