@@ -8,10 +8,18 @@
 
 #import <Foundation/Foundation.h>
 #import "bnManager.h"
+
+
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
     
-        [[bnManager new] test];
+//        [[bnManager new] test];
+        
+        NSArray *arr=@[@"12",@"1",@"3",@"4",@"12",@"13",@"5",@"13"];
+
+        [bnManager filterArr:arr];
+        
         
     }
     return 0;

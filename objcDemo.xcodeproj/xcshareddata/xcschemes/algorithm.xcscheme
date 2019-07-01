@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1000"
+   LastUpgradeVersion = "1010"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0BCFB2A6216A04FE0046BB73"
-               BuildableName = "runtime"
-               BlueprintName = "runtime"
+               BlueprintIdentifier = "0BE3DDDF216CC03500882E05"
+               BuildableName = "algorithm"
+               BlueprintName = "algorithm"
                ReferencedContainer = "container:objcDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0BCFB2A6216A04FE0046BB73"
-            BuildableName = "runtime"
-            BlueprintName = "runtime"
+            BlueprintIdentifier = "0BE3DDDF216CC03500882E05"
+            BuildableName = "algorithm"
+            BlueprintName = "algorithm"
             ReferencedContainer = "container:objcDemo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -55,9 +55,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0BCFB2A6216A04FE0046BB73"
-            BuildableName = "runtime"
-            BlueprintName = "runtime"
+            BlueprintIdentifier = "0BE3DDDF216CC03500882E05"
+            BuildableName = "algorithm"
+            BlueprintName = "algorithm"
             ReferencedContainer = "container:objcDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -74,9 +74,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0BCFB2A6216A04FE0046BB73"
-            BuildableName = "runtime"
-            BlueprintName = "runtime"
+            BlueprintIdentifier = "0BE3DDDF216CC03500882E05"
+            BuildableName = "algorithm"
+            BlueprintName = "algorithm"
             ReferencedContainer = "container:objcDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

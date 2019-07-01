@@ -127,4 +127,29 @@ void testCharacteristics()
 //}
 
 
+//过滤数组重复元素
+//1.查询当前元素的索引；
+//2.所查索引是否等于当前遍历元素的索引；如果不等，则是重复元素；反之则不是；
+int indexOfElement(int *a,int n,int value)
+{
+    for (int i=0; i<n; i++) {
+        if(a[i]==value)
+            return i;
+    }
+    return -1;
+}
+
+void filterArrayRepeatElements(int *a,int n)
+{
+    
+    for (int i=0; i<n; i++) {
+        if(indexOfElement(a, n, a[i])==i)
+        {
+            printf("%d,",a[i]);
+        }
+    }
+    printf("\n");
+}
+
+
 @end

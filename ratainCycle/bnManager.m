@@ -21,4 +21,20 @@
     [machine release];
 }
 
++(void)filterArr:(NSArray *)array
+{
+    NSMutableArray *arr=[NSMutableArray array];
+    [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if([array indexOfObject:obj]==idx)
+        {
+            [arr addObject:obj];
+            
+        }
+    }];
+    NSLog(@"%@",array);
+    
+    NSLog(@"%@",arr);
+}
+
+
 @end
