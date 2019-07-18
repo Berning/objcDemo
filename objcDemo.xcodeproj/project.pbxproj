@@ -246,7 +246,6 @@
 		0BA33CAD220B1B1400DF887B /* BNTableViewCellTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA33CA6220B1B1300DF887B /* BNTableViewCellTest.m */; };
 		0BAE7F9B21D921A0009134E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BAE7ED021D9219F009134E6 /* Assets.xcassets */; };
 		0BAE7F9C21D921A0009134E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BAE7ED121D9219F009134E6 /* LaunchScreen.storyboard */; };
-		0BAE7FEF21D921A0009134E6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0BAE7F9821D9219F009134E6 /* Info.plist */; };
 		0BAE7FF021D921A0009134E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BAE7F9921D9219F009134E6 /* main.m */; };
 		0BC742CF2243C106006847A5 /* canvas.html in Resources */ = {isa = PBXBuildFile; fileRef = 0BC742CE2243C106006847A5 /* canvas.html */; };
 		0BC742D12243C73C006847A5 /* audio.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0BC742D02243C73C006847A5 /* audio.htm */; };
@@ -255,7 +254,6 @@
 		0BC742D82243D262006847A5 /* track.html in Resources */ = {isa = PBXBuildFile; fileRef = 0BC742D72243D262006847A5 /* track.html */; };
 		0BC742DC2243D652006847A5 /* zim.srt in Resources */ = {isa = PBXBuildFile; fileRef = 0BC742DB2243D652006847A5 /* zim.srt */; };
 		0BC742DE2243D842006847A5 /* dataList.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0BC742DD2243D842006847A5 /* dataList.htm */; };
-		0BC742E02243D89B006847A5 /* demo-form.php in Resources */ = {isa = PBXBuildFile; fileRef = 0BC742DF2243D89B006847A5 /* demo-form.php */; };
 		0BC742E42244B710006847A5 /* keygen.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0BC742E32244B710006847A5 /* keygen.htm */; };
 		0BC742E62244BC14006847A5 /* output.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0BC742E52244BC14006847A5 /* output.htm */; };
 		0BC742E82244BFC6006847A5 /* article.htm in Resources */ = {isa = PBXBuildFile; fileRef = 0BC742E72244BFC6006847A5 /* article.htm */; };
@@ -786,7 +784,6 @@
 		0BC742D72243D262006847A5 /* track.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = track.html; sourceTree = "<group>"; };
 		0BC742DB2243D652006847A5 /* zim.srt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = zim.srt; sourceTree = "<group>"; };
 		0BC742DD2243D842006847A5 /* dataList.htm */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = dataList.htm; sourceTree = "<group>"; };
-		0BC742DF2243D89B006847A5 /* demo-form.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = "demo-form.php"; sourceTree = "<group>"; };
 		0BC742E32244B710006847A5 /* keygen.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = keygen.htm; sourceTree = "<group>"; };
 		0BC742E52244BC14006847A5 /* output.htm */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = output.htm; sourceTree = "<group>"; };
 		0BC742E72244BFC6006847A5 /* article.htm */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = article.htm; sourceTree = "<group>"; };
@@ -1746,7 +1743,6 @@
 				0BC742D72243D262006847A5 /* track.html */,
 				0BC742DB2243D652006847A5 /* zim.srt */,
 				0BC742DD2243D842006847A5 /* dataList.htm */,
-				0BC742DF2243D89B006847A5 /* demo-form.php */,
 				0BC742E32244B710006847A5 /* keygen.htm */,
 				0BC742E52244BC14006847A5 /* output.htm */,
 				0BC742E72244BFC6006847A5 /* article.htm */,
@@ -2169,6 +2165,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 0B47BA8A216915B400330C52;
 			productRefGroup = 0B47BA94216915B400330C52 /* Products */;
@@ -2196,7 +2193,6 @@
 				0B6788FC22422A8700651C35 /* 段落.html in Resources */,
 				0B6788F522422A8700651C35 /* 列表2.htm in Resources */,
 				0B6788EC22422A8700651C35 /* demo-form.php in Resources */,
-				0BC742E02243D89B006847A5 /* demo-form.php in Resources */,
 				0B6788FB22422A8700651C35 /* 格式.htm in Resources */,
 				0B387AFB21E343EF001A0ED7 /* Paths.webarchive in Resources */,
 				0BC742E62244BC14006847A5 /* output.htm in Resources */,
@@ -2223,7 +2219,6 @@
 				0B6788F422422A8700651C35 /* 列表.htm in Resources */,
 				0BC742D42243C972006847A5 /* source.htm in Resources */,
 				0BC742D82243D262006847A5 /* track.html in Resources */,
-				0BAE7FEF21D921A0009134E6 /* Info.plist in Resources */,
 				0BAE7F9B21D921A0009134E6 /* Assets.xcassets in Resources */,
 				0B6788F322422A8700651C35 /* span.htm in Resources */,
 				0BAE7F9C21D921A0009134E6 /* LaunchScreen.storyboard in Resources */,
@@ -2653,9 +2648,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 95L54LR7S6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -2663,29 +2660,35 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 95L54LR7S6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
 		0BE3DDE5216CC03600882E05 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 95L54LR7S6;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/algorithm/algorithm.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
 		0BE3DDE6216CC03600882E05 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 95L54LR7S6;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/algorithm/algorithm.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
