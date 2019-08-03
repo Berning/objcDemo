@@ -2060,27 +2060,59 @@
 		0BE3DDE7216CC06200882E05 /* algorithm */ = {
 			isa = PBXGroup;
 			children = (
-				0B4F74E02172331000542D5F /* algorithm.h */,
+				58017ED722E0B64C00BE07BF /* recursion&interView */,
+				58017ED622E0B62900BE07BF /* test */,
+				58017ED522E0B55200BE07BF /* sort */,
+				58017ED422E0B54700BE07BF /* search */,
 				0BE3DDE8216CC06200882E05 /* common.h */,
 				0BE3DDE9216CC06200882E05 /* common.m */,
-				0BE3DDEA216CC06200882E05 /* stringHandle.h */,
-				0BE3DDEB216CC06200882E05 /* stringHandle.m */,
-				0BE3DDEC216CC06200882E05 /* interView.h */,
-				0BE3DDED216CC06200882E05 /* interView.m */,
-				0BE3DDEE216CC06200882E05 /* recursion.h */,
-				0BE3DDEF216CC06200882E05 /* recursion.m */,
-				0BE3DDF0216CC06200882E05 /* sort.h */,
-				0BE3DDF1216CC06200882E05 /* sort.m */,
+			);
+			path = algorithm;
+			sourceTree = "<group>";
+		};
+		58017ED422E0B54700BE07BF /* search */ = {
+			isa = PBXGroup;
+			children = (
 				0B5C4E39217CA2F600E0A113 /* fibnociSearch.h */,
 				0B5C4E3A217CA2F600E0A113 /* fibnociSearch.m */,
 				0B9FFE9921835C4C004101F0 /* treeSearch.h */,
 				0B9FFE9A21835C4C004101F0 /* treeSearch.m */,
 				0B5C4E36217C9B5400E0A113 /* search.h */,
 				0B5C4E37217C9B5400E0A113 /* search.m */,
+			);
+			path = search;
+			sourceTree = "<group>";
+		};
+		58017ED522E0B55200BE07BF /* sort */ = {
+			isa = PBXGroup;
+			children = (
+				0BE3DDF0216CC06200882E05 /* sort.h */,
+				0BE3DDF1216CC06200882E05 /* sort.m */,
+			);
+			path = sort;
+			sourceTree = "<group>";
+		};
+		58017ED622E0B62900BE07BF /* test */ = {
+			isa = PBXGroup;
+			children = (
+				0B4F74E02172331000542D5F /* algorithm.h */,
 				0B4F74E1217234CE00542D5F /* alTest.h */,
 				0B4F74E2217234CE00542D5F /* alTest.m */,
 			);
-			path = algorithm;
+			path = test;
+			sourceTree = "<group>";
+		};
+		58017ED722E0B64C00BE07BF /* recursion&interView */ = {
+			isa = PBXGroup;
+			children = (
+				0BE3DDEA216CC06200882E05 /* stringHandle.h */,
+				0BE3DDEB216CC06200882E05 /* stringHandle.m */,
+				0BE3DDEC216CC06200882E05 /* interView.h */,
+				0BE3DDED216CC06200882E05 /* interView.m */,
+				0BE3DDEE216CC06200882E05 /* recursion.h */,
+				0BE3DDEF216CC06200882E05 /* recursion.m */,
+			);
+			path = "recursion&interView";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2603,8 +2635,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 5PQS6M7JL5;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 95L54LR7S6;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/objcReview/objc-prefix.pch";
 				INFOPLIST_FILE = objcReview/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -2614,7 +2646,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.BN.www.objcReview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = hrd_zjs_dev_007;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -2626,8 +2658,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 5PQS6M7JL5;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 95L54LR7S6;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/objcReview/objc-prefix.pch";
 				INFOPLIST_FILE = objcReview/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -2637,7 +2669,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.BN.www.objcReview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = hrd_zjs_dev_007;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;

@@ -142,7 +142,8 @@ int indexOfElement(int *a,int n,int value)
 void filterArrayRepeatElements(int *a,int n)
 {
     
-    for (int i=0; i<n; i++) {
+    for (int i=0; i<n; i++)
+    {
         if(indexOfElement(a, n, a[i])==i)
         {
             printf("%d,",a[i]);

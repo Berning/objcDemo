@@ -5,11 +5,13 @@
 //  Created by Berning on 2018/10/21.
 //  Copyright © 2018年 BN. All rights reserved.
 //
+//顺序，二分，插值
 
 #import "search.h"
 #import "fibnociSearch.h"
 
 @implementation search
+
 
 //顺序查找
 //ps：顺序查找适合于存储结构为顺序存储或链接存储的线性表。
