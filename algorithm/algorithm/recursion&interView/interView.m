@@ -117,8 +117,8 @@ void testCharacteristics()
 //360面试
 //-(void)printViews:(UIView *)view
 //{
-//    //      NSArray *viewArray=[view subviews];
-//    for (UIView *childView in [view subviews]) {
+//    NSArray *viewArray=[view subviews];
+//    for (UIView *childView in viewArray) {
 //        NSLog(@"%@",childView);
 //        if ([[childView subviews] count]!=0) {
 //            [self printViews:childView];
@@ -151,6 +151,7 @@ void filterArrayRepeatElements(int *a,int n)
     }
     printf("\n");
 }
+
 
 
 @end

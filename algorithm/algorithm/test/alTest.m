@@ -12,12 +12,21 @@
 
 +(void)test
 {
+//字符串
 //    [stringHandle test];
+    
+//开方
 //    [self sqrtTest];
+    
+//排序
 //    [self sortTest];
-    [self searchTest];
     
+//查找
+//    [self searchTest];
     
+    testComb();
+
+
 }
 
 +(void)searchTest

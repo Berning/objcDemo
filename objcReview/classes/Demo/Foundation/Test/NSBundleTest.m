@@ -23,9 +23,9 @@
     BNLog(@"bundleInfo:%@",infoDict);
     
     BNLog(@"BundleName:%@",[NSString stringWithBundleName]);
-    BNLog(@"BundleID:%@",[NSString stringWithBundleID]);
+    BNLog(@"BundleID:%@",[NSString stringWithBundleIdentifier]);
     BNLog(@"BundleVersion:%@",[NSString stringWithBundleVersion]);
-    BNLog(@"BundleBuildVersion:%@",[NSString stringWithBundleBuildVersion]);
+    BNLog(@"BundleBuildVersion:%@",[NSString stringWithBundleBuild]);
 }
 
 

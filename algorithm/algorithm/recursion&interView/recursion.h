@@ -18,14 +18,20 @@
 
 @interface recursion : NSObject
 
-int recursionf(int i);
+//阶乘n!
+int factorial(int n);
 
+//汉诺塔
 void hanoi(int n,int p1,int p2,int p3);
 
-void Perm(int list[],int k,int m);
-
+//斐波纳西数列
 long Fibonaci(int n);
 
-void recursionTest(int low ,int high); //快排中用到
+//排列
+void testPerm(void);
+
+//组合
+void testComb(void);
+
 
 @end

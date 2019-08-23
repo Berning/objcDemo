@@ -469,7 +469,8 @@ static NSString *const keyKeychainKey = @"com.sobeycloud.cdAnalysis";
 
 #pragma mark -bundle
 /** 获取app名字 */
-+ (NSString *)stringWithBundleName {
++ (NSString *)stringWithBundleName
+{
     
     NSString *displayName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
     if (displayName.length < 1) {
@@ -480,7 +481,8 @@ static NSString *const keyKeychainKey = @"com.sobeycloud.cdAnalysis";
 }
 
 /** 获取app版本号 */
-+ (NSString *)stringWithBundleVersion {
++ (NSString *)stringWithBundleVersion
+{
     
     NSString *shortString = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
     
@@ -488,7 +490,8 @@ static NSString *const keyKeychainKey = @"com.sobeycloud.cdAnalysis";
 }
 
 /** 获取app版本编译号 */
-+ (NSString *)stringWithBundleBuildVersion {
++ (NSString *)stringWithBundleBuild
+{
     
     NSString *buildString = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
     
@@ -496,7 +499,8 @@ static NSString *const keyKeychainKey = @"com.sobeycloud.cdAnalysis";
 }
 
 /** 获取应用程序ID */
-+ (NSString *)stringWithBundleID {
++ (NSString *)stringWithBundleIdentifier
+{
     
     NSString *bundleId = [[NSBundle mainBundle] bundleIdentifier];
     

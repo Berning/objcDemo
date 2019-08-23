@@ -55,10 +55,10 @@
 + (NSString *)stringWithBundleVersion;
 
 /** 获取app版本编译号 */
-+ (NSString *)stringWithBundleBuildVersion;
++ (NSString *)stringWithBundleBuild;
 
 /** 获取应用程序ID */
-+ (NSString *)stringWithBundleID;
++ (NSString *)stringWithBundleIdentifier;
 
 #pragma mark -device
 /** 获取设备ID (base on [openUDID class])*/

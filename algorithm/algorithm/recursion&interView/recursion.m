@@ -9,20 +9,32 @@
 
 #import "recursion.h"
 
+
 @implementation recursion
 
-//排列
 int n = 0;
-void perm(int list[], int k, int m) {
+
+/**
+ 全排列
+
+ @param list 数组
+ @param k 传0,代表从第0个元素开始
+ @param m 数组长度-1
+ */
+void perm(int list[], int k, int m)
+{
     int i;
-    if(k > m)  {
-        for(i = 0; i <= m; i++)
+    if(k==m)
+    {
+        for(i=0; i<=m; i++)
             printf("%d ", list[i]);
         printf("\n");
         n++;
     }
-    else {
-        for(i = k; i <= m; i++)     {
+    else
+    {
+        for(i=k; i<=m; i++)
+        {
             swap(&list[k], &list[i]);
             perm(list, k + 1, m);
             swap(&list[k], &list[i]);
@@ -32,53 +44,62 @@ void perm(int list[], int k, int m) {
 
 void testPerm()
 {
-    int list[]={1,2,3,4,5};
-    perm(list, 0, 4);
+    int list[]={1,2,3};
+    perm(list, 0,sizeof(list)/sizeof(list)[0]-1);
     printf("total:%d\n",n);
+    
 }
 
-//递归组合
-void Comb(int index,int begin,int len,int n,int *A,int *C)
+
+
+
+int c=0;
+/**
+ 组合
+
+ @param index 表示某个组合中的索引
+ @param begin 表示从数组A中begin位置开始寻找
+ @param n 表示数组长度
+ @param m  表示组合中个数
+ @param A 表示原数组
+ @param C 表示组合数组
+ */
+void Comb(int index,int begin,int n,int m,int *A,int *C)
 {
-    // index表示某个组合中的索引，begin表示从数组A中begin位置开始寻找， // len表示数组A长度，n表示组合中个数，A表示原数组，C表示组合数组
-    if(index==n)
+     if(index==m)
     {
-        for(int i=0;i<n;i++)
+        for(int i=0;i<m;i++)
             printf("%d ",C[i]);
         printf("\n");
+        c++;
         return;
     }
-    for(int j=begin;j<=len-n+index;j++)
+    for(int j=begin;j<=n-m+index;j++)
     {
         C[index]=A[j];
-        Comb(index+1,j+1,len,n,A,C);
+        Comb(index+1,j+1,n,m,A,C);
     }
 }
 
 void testComb()
 {
-    int A[5]={1,2,3,4,5};
-    int len=5,n=3;
-    int *C=(int *)malloc((n+1)*sizeof(int));  //int *C=new int[n+1];
-    Comb(0,0,len,n,A,C);
-    
+    int A[]={1,2,3,4,5,6,7};
+    int m=3;
+    int *C=(int *)malloc(m*sizeof(int));  //int *C=new int[m+1];
+    Comb(0,0,sizeof(A)/sizeof(A)[0],m,A,C);
+    printf("total:%d\n",c);
     free(C);                      //delete []C;
-
 }
 
 
-//n!    
-int recursionf(int i)
+//阶乘n!
+int factorial(int n)
 {
-    int sum = 0;
-    if (0 == i)
-        return (1);
-    else
-        sum = i * recursionf(i-1);
-    return sum;
+    if (n<=1)
+        return 1;
+    return n*factorial(n-1);
 }
 
-#warning problem
 //汉诺塔
 void hanoi(int n,int p1,int p2,int p3)
 {
@@ -93,41 +114,13 @@ void hanoi(int n,int p1,int p2,int p3)
     }
 }
 
-#warning problem
-//排列组合
-void Perm(int list[],int k,int m)
-{
-    if (k == m-1)
-    {
-        for(int i=0;i<m;i++)
-        {
-            printf("%d",list[i]);
-        }
-        printf("n");
-    }
-    else
-    {
-        for(int i=k;i<m;i++)
-        {
-            swap(&list[k],&list[i]);
-            Perm(list,k+1,m);
-            swap(&list[k],&list[i]);
-        }
-    }
-}
-
 
 //斐波那契
 long Fibonaci(int n)
 {
-    long fibNum=0;
-    if (0 == n)
-        fibNum=0;
-    if (1 == n)
-        fibNum= 1;
-    if (n > 1)
-        fibNum= Fibonaci(n-1) + Fibonaci(n-2);
-    return fibNum;
+    if(n<2)
+        return 1;
+    return Fibonaci(n-1) + Fibonaci(n-2);
 }
 
 
@@ -143,33 +136,5 @@ long Fibonaci(int n)
 //    }
 //}
 
-
-int partition1(int low,int high)
-{
-    low++;
-    
-    return low;
-}
-
-void recursionTest(int low ,int high)  //快排中用到
-{
-    printf("low=%d,high=%d",low,high);
-    if(low<high)
-    {
-        printf("--------------------调用成功\n\n\n");
-        int pivot=partition1(low, high);
-        
-        printf("================first recursion================\n");
-        printf("pivot=%d\n",pivot);
-
-        recursionTest(pivot, high-1);   //第一次递归成功几次（即产生几个pivot），待第二次递归失败，就回来再调用几次第一个递归，调用完之后再进行第二个递归。
-        
-        printf("--------------------调用失败\n\n\n");
-        printf("================second recursion================\n");
-        
-        recursionTest(pivot, high);
-    }
-    
-}
 
 @end
