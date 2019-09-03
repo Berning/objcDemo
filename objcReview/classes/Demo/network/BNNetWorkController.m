@@ -16,6 +16,7 @@ static NSString * const CellID=@"netWork";
 #import "NSURLConnectionTest.h"
 #import "NSURLSessionTest.h"
 #import "AFNetworkingTest.h"
+#import "Test/WKWebViewTest.h"
 
 @interface BNNetWorkController ()
 @property(nonatomic,strong)NSMutableArray *netWorks;
@@ -34,6 +35,7 @@ static NSString * const CellID=@"netWork";
         [_netWorks addObject:NSStringFromClass([NSURLConnectionTest class])];
         [_netWorks addObject:NSStringFromClass([NSURLSessionTest class])];
         [_netWorks addObject:NSStringFromClass([AFNetworkingTest class])];
+        [_netWorks addObject: NSStringFromClass([WKWebViewTest class])];
 
     }
     return _netWorks;

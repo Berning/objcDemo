@@ -10,7 +10,7 @@
 
 @implementation BNBackButton
 
--(instancetype)initWithFrame:(CGRect)frame
+- (instancetype)initWithFrame:(CGRect)frame
 {
     if(self=[super initWithFrame:frame])
     {
@@ -19,19 +19,19 @@
     return self;
 }
 
--(void)setHidden:(BOOL)hidden
+- (void)setHidden:(BOOL)hidden
 {
     [super setHidden:hidden];
     [self setNeedsDisplay];
 
 }
--(void)setTitle:(NSString *)title
+- (void)setTitle:(NSString *)title
 {
     _title=title;
     [self setNeedsDisplay];
 }
 
--(void)drawRect:(CGRect)rect
+- (void)drawRect:(CGRect)rect
 {
     
     CGContextRef ctx=UIGraphicsGetCurrentContext();
@@ -66,9 +66,10 @@
     
     CGContextStrokePath(ctx);
     
+    
 }
 
--(void)addTarget:(id)target action:(SEL)action
+- (void)addTarget:(id)target action:(SEL)action
 {
     [self addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:target action:action]];
 }

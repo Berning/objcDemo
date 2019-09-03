@@ -24,6 +24,8 @@
 
 @interface BNSandBox : NSObject
 
+@property(nonatomic,class,readonly)void test;
+
 +(void)pathForDirectoryInDomains;
 
 @end

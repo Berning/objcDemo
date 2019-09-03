@@ -69,5 +69,21 @@
 }
 
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [super tableView:tableView didSelectRowAtIndexPath:indexPath];
+    
+    
+
+    if ([NSClassFromString(self.stores[indexPath.row]) respondsToSelector:@selector(test)])
+    {
+        [NSClassFromString(self.stores[indexPath.row]) test];
+
+    }
+    
+}
+
+
+
 
 @end

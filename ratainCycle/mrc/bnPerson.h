@@ -18,7 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
 //delegate是可以用ratain的，只要在第三方中设置delegate就OK
 @property(nonatomic,strong,nullable)id<bnPersonDelegate> delegate;
 
-
 @end
 
 NS_ASSUME_NONNULL_END

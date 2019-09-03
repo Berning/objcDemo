@@ -126,11 +126,12 @@ NSArray * AFQueryStringPairsFromDictionary(NSDictionary *dictionary) {
     return AFQueryStringPairsFromKeyAndValue(nil, dictionary);
 }
 
+
 NSArray * AFQueryStringPairsFromKeyAndValue(NSString *key, id value) {
     NSMutableArray *mutableQueryStringComponents = [NSMutableArray array];
-
+    
     NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"description" ascending:YES selector:@selector(compare:)];
-
+    
     if ([value isKindOfClass:[NSDictionary class]]) {
         NSDictionary *dictionary = value;
         // Sort dictionary keys to ensure consistent ordering in query string, which is important when deserializing potentially ambiguous sequences, such as an array of dictionaries
@@ -157,7 +158,9 @@ NSArray * AFQueryStringPairsFromKeyAndValue(NSString *key, id value) {
     return mutableQueryStringComponents;
 }
 
-#pragma mark -
+
+
+#pragma mark -§
 
 @interface AFStreamingMultipartFormData : NSObject <AFMultipartFormData>
 - (instancetype)initWithURLRequest:(NSMutableURLRequest *)urlRequest
@@ -231,7 +234,7 @@ NSArray * AFQueryStringPairsFromKeyAndValue(NSString *key, id value) {
     return self;
 }
 
-#pragma mark -
+#pragma mark -请求头
 
 - (NSDictionary *)HTTPRequestHeaders {
     return [NSDictionary dictionaryWithDictionary:self.mutableHTTPRequestHeaders];
@@ -241,6 +244,7 @@ NSArray * AFQueryStringPairsFromKeyAndValue(NSString *key, id value) {
 	[self.mutableHTTPRequestHeaders setValue:value forKey:field];
 }
 
+#pragma mark -
 - (void)setAuthorizationHeaderFieldWithUsername:(NSString *)username password:(NSString *)password {
 	NSString *basicAuthCredentials = [NSString stringWithFormat:@"%@:%@", username, password];
     [self setValue:[NSString stringWithFormat:@"Basic %@", AFBase64EncodedStringFromString(basicAuthCredentials)] forHTTPHeaderField:@"Authorization"];
@@ -331,13 +335,16 @@ NSArray * AFQueryStringPairsFromKeyAndValue(NSString *key, id value) {
             } else {
                 data = [[pair.value description] dataUsingEncoding:self.stringEncoding];
             }
+            
+            NSLog(@"data:%@",data);
 
             if (data) {
                 [formData appendPartWithFormData:data name:[pair.field description]];
             }
         }
     }
-
+    
+    NSLog(@"formData:%@",formData);
     if (block) {
         block(formData);
     }
@@ -420,10 +427,15 @@ NSArray * AFQueryStringPairsFromKeyAndValue(NSString *key, id value) {
 
     if (parameters) {
         NSString *query = nil;
-        if (self.queryStringSerialization) {
+        
+        if (self.queryStringSerialization)
+        {
             query = self.queryStringSerialization(request, parameters, error);
-        } else {
-            switch (self.queryStringSerializationStyle) {
+        }
+        else
+        {
+            switch (self.queryStringSerializationStyle)
+            {
                 case AFHTTPRequestQueryStringDefaultStyle:
                     query = AFQueryStringFromParametersWithEncoding(parameters, self.stringEncoding);
                     break;
@@ -432,9 +444,13 @@ NSArray * AFQueryStringPairsFromKeyAndValue(NSString *key, id value) {
 
         if ([self.HTTPMethodsEncodingParametersInURI containsObject:[[request HTTPMethod] uppercaseString]]) {
             mutableRequest.URL = [NSURL URLWithString:[[mutableRequest.URL absoluteString] stringByAppendingFormat:mutableRequest.URL.query ? @"&%@" : @"?%@", query]];
-        } else {
-            if (![mutableRequest valueForHTTPHeaderField:@"Content-Type"]) {
+        }
+        else
+        {
+            if (![mutableRequest valueForHTTPHeaderField:@"Content-Type"])
+            {
                 NSString *charset = (__bridge NSString *)CFStringConvertEncodingToIANACharSetName(CFStringConvertNSStringEncodingToEncoding(self.stringEncoding));
+
                 [mutableRequest setValue:[NSString stringWithFormat:@"application/x-www-form-urlencoded; charset=%@", charset] forHTTPHeaderField:@"Content-Type"];
             }
             [mutableRequest setHTTPBody:[query dataUsingEncoding:self.stringEncoding]];

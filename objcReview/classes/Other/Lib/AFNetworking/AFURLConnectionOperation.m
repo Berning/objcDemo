@@ -459,7 +459,8 @@ static inline BOOL AFStateTransitionIsValid(AFOperationState fromState, AFOperat
     [self.lock unlock];
 }
 
-//自己方法
+#pragma mark -类扩展方法
+//自定义方法
 - (void)operationDidStart {
     [self.lock lock];
     if (![self isCancelled]) {
@@ -491,6 +492,7 @@ static inline BOOL AFStateTransitionIsValid(AFOperationState fromState, AFOperat
     });
 }
 
+//NSOperation
 - (void)cancel {
     [self.lock lock];
     if (![self isFinished] && ![self isCancelled]) {

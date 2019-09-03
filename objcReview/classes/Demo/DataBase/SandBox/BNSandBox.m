@@ -10,6 +10,11 @@
 
 @implementation BNSandBox
 
++(void)test
+{
+    [self pathForDirectoryInDomains];
+}
+
 +(void)pathForDirectoryInDomains
 {
     

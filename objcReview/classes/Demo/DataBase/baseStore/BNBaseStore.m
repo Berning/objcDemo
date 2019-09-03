@@ -67,12 +67,12 @@
     
     [userDefaults setObject:arr forKey:@"k1"];
     [userDefaults setObject:str forKey:@"k2"];
-//    [userDefaults setObject:p forKey:@"person"];
+//    [userDefaults setObject:p forKey:@"person"];  //会奔溃的
     [userDefaults synchronize];
     
     
-    NSLog(@"%@\n%@",[userDefaults objectForKey:@"k1"],[userDefaults objectForKey:@"k2"]);
-    NSLog(@"%@\n%@",[userDefaults arrayForKey:@"k1"],[userDefaults stringForKey:@"k2"]);
+    NSLog(@"objforKey:%@\n%@",[userDefaults objectForKey:@"k1"],[userDefaults objectForKey:@"k2"]);
+    NSLog(@"arrforKey:%@\n%@",[userDefaults arrayForKey:@"k1"],[userDefaults stringForKey:@"k2"]);
     NSLog(@"%@",[userDefaults objectForKey:@"person"]);
 }
 
@@ -89,6 +89,7 @@
     [NSKeyedArchiver  archiveRootObject:p toFile:filePath];
     BNPerson *getP=[NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
     NSLog(@"p:%@,%d", getP.name,getP.age);
+    
     
 }
 

@@ -75,6 +75,7 @@ static dispatch_group_t http_request_operation_completion_group() {
 - (void)setResponseSerializer:(AFHTTPResponseSerializer <AFURLResponseSerialization> *)responseSerializer {
     NSParameterAssert(responseSerializer);
 
+//    NSRecursiveLock
     [self.lock lock];
     _responseSerializer = responseSerializer;
     self.responseObject = nil;

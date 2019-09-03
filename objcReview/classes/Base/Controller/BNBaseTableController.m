@@ -99,7 +99,7 @@
     return nil;
 }
 
-#pragma mark - Table view data delegate
+#pragma mark - Table view delegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
