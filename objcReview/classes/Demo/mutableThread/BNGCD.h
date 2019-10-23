@@ -6,7 +6,7 @@
 //  Copyright © 2017年 BN. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "BNBaseTest.h"
 #import <UIKit/UIKit.h>
 #import "Singleton.h"
 
@@ -17,7 +17,7 @@ enum{
     kDelayTimer
 };
 
-@interface BNGCD : NSObject
+@interface BNGCD : BNBaseTest
 // 同步函数,会等block执行完毕, 才会执行后面的代码
 +(void)syncWithSerial;
 +(void)syncWithConcurrent;
@@ -53,9 +53,7 @@ enum{
 //dispatch_group_async全部完成，dispatch_group_notify()才会执行
 +(void)groupAsync:(UIView *)view;
 
-@property(class,readonly)void test;
-
-SingletonH(Med)
+SingletonH(GCD)
 //+(instancetype)shareData;
 
 -(void)testSingle;
@@ -69,16 +67,18 @@ SingletonH(Med)
 
 typedef  void (^eBlock)(void);
 
-@interface BNBlock : NSObject
+@interface BNBlock : BNBaseTest
 
 
-+(void)test;
+
 
 @property(nonatomic,copy)void(^completion)(id obj);
 
 @property(nonatomic,copy)NSString *name;
 
-@property(nonatomic,copy)eBlock block1;
+@property(nonatomic,copy)eBlock ablock;
+
+@property(nonatomic,strong)NSDictionary *dict;
 
 
 

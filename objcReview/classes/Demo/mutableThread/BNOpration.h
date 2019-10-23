@@ -6,7 +6,7 @@
 //  Copyright © 2017年 BN. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "BNBaseTest.h"
 
 /*
                 生命周期    创建线程    有无队列概念   可否控制线程
@@ -27,10 +27,8 @@ NSOperation     自动        自动        有           可以
 //    NSOperationQueue
 
 
-@interface BNOpration : NSObject
+@interface BNOpration : BNBaseTest
 
 
-
-@property(class,readonly)void test;
 
 @end

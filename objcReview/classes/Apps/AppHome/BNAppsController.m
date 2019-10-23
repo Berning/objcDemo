@@ -10,6 +10,7 @@
 #import "BNAppCollectionViewCell.h"
 #import "BNLotteryController.h"
 
+
 static NSString * const cellID=@"cell";
 
 @interface BNAppsController ()
@@ -25,7 +26,6 @@ static NSString * const cellID=@"cell";
     if(!_viewControllers)
     {
         _viewControllers=[NSMutableArray array];
-        
     }
     return _viewControllers;
 }
@@ -37,6 +37,7 @@ static NSString * const cellID=@"cell";
     [self.viewControllers addObject:NSStringFromClass([BNLotteryController class])];
 
     [self.collectionView registerClass:[BNAppCollectionViewCell class] forCellWithReuseIdentifier:cellID];
+    
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section

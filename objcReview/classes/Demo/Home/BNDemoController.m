@@ -32,7 +32,12 @@
 {
     [super viewDidLoad];
     self.navigationItem.title=@"必恩";
+    [self setData];
+    
+}
 
+- (void)setData
+{
     BNGroup *group1=[BNGroup groupWithTpye:BNGroupTypeObjc];
     BNGroup *group2=[BNGroup groupWithTpye:BNGroupTypeC];
     BNGroup *group3=[BNGroup groupWithTpye:BNGroupTypeWeb];
@@ -53,7 +58,6 @@
         }
         
     }];
-    
 
 }
 

@@ -13,10 +13,11 @@
 
 -(void)dealloc
 {
-    NSLog(@"bnPerson dealloc");
+    NSLog(@"pre:%@",[self class]);
+//    self.delegate=nil;
 
-    self.delegate=nil;
     [super dealloc];
+    NSLog(@"suf:%@",[self class]);
 }
 @end
 

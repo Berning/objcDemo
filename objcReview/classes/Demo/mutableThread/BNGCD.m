@@ -19,7 +19,16 @@
 {
     
 //    [self onceAndApply:1];
-    [self timeDelay:kDelayThread];
+//    [self timeDelay:kDelayThread];
+    
+//    [self syncWithSerial];
+//    [self syncWithMain];
+//    [self syncWithConcurrent];
+//    [self asyncWithSerial];
+//    [self asyncWithMain];
+//    [self asyncWithConcurrent];
+    [self syncInAsync:BNRootViewController.view];
+    
 }
 /*
 GCD 中的队列是用来放置需要执行的任务的，任务的取出遵循队列的先进先出的原则。
@@ -39,7 +48,7 @@ GCD 将队列中的任务取出，并放置到对应的线程中执行。
     // 1.创建一个串行队列
     // #define DISPATCH_QUEUE_SERIAL NULL
     // 所以可以直接传NULL
-    dispatch_queue_t queue = dispatch_queue_create("com.520it.lnj", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_queue_t queue = dispatch_queue_create("com.520it.lnj", DISPATCH_QUEUE_SERIAL);
     
     // 2.将任务添加到队列中
     dispatch_sync(queue, ^{
@@ -70,12 +79,12 @@ GCD 将队列中的任务取出，并放置到对应的线程中执行。
 +(void)syncWithMain
 {
     NSLog(@"begin:\n");
-    dispatch_queue_t queue = dispatch_get_main_queue();
     
-    //  同步函数,会等同步函数中的block执行完毕, 才会执行后面的代码,但由于主队列上的任务是顺序执行的，block内容（即新添加到mianqueue的任务）在主队列后面，需要等待主队列前面的任务执行完才能执行；然而，又由于sync的缘故，后面的任务又要等待blockn内容（新添加到主队列的任务）执行完才能继续执行。故而造成互相等待的现象（死锁）
+    
+    //  同步函数,会等同步函数中的block执行完毕, 才会执行后面的代码,但由于主队列上的任务是顺序执行的，block（添加到主队列的任务）在主队列后面，需要等待主队列前面的任务执行完才能执行；然而，由于sync的缘故，后面的任务又要等待block执行完才能继续执行。故而造成互相等待的现象（死锁）
     // 注意: 如果dispatch_sync方法是在主线程中调用的, 并且传入的队列是主队列, 那么会导致死锁
-    dispatch_sync(queue, ^{
-        NSLog(@"block内容");
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        NSLog(@"block");
     });
     NSLog(@"end");
 }
@@ -154,13 +163,13 @@ GCD 将队列中的任务取出，并放置到对应的线程中执行。
 {
     // 主队列:
     // 特点: 只要将任务添加到主队列中, 那么任务"一定"会在主线程中执行 \
-    无论你是调用同步函数还是异步函数
-    dispatch_queue_t queue = dispatch_get_main_queue();
+       无论你是调用同步函数还是异步函数
     
-    dispatch_async(queue, ^{
+    dispatch_async( dispatch_get_main_queue(), ^{
         NSLog(@"%@", [NSThread currentThread]);
     });
     NSLog(@"任务完成---%@",[NSThread currentThread]);
+    
 }
 
 
@@ -240,34 +249,35 @@ GCD 将队列中的任务取出，并放置到对应的线程中执行。
 +(void)syncInAsync:(UIView *)view
 {
    
-    UIImageView *imgView=[[UIImageView alloc ] initWithFrame:CGRectMake(20, 114,  100, 100)];
+    UIImageView *imgView=[[UIImageView alloc ] initWithFrame:CGRectMake(300, 465,  100, 100)];
     imgView.backgroundColor=[UIColor cyanColor];
     [view addSubview:imgView];
     
     dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
-    
     // 2.调用异步函数
     dispatch_async(queue, ^{
         // 1.下载图片
-        NSURL *url = [NSURL URLWithString:@"https://wx2.sinaimg.cn/mw690/624d98e1ly1fdmcckuhkcj20en081aaf.jpg"];
+        NSURL *url = [NSURL URLWithString:@"http://121.40.171.11/objc/images/head6.jpg"];
+//        NSURL *url = [NSURL URLWithString:@"https://gss2.bdstatic.com/-fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike180%2C5%2C5%2C180%2C60/sign=1f97063f6c2762d09433acedc185639f/d8f9d72a6059252d6251a4183b9b033b5bb5b96c.jpg"];
+
         NSData *data = [NSData dataWithContentsOfURL:url];
         // 2.将二进制转换为图片
         UIImage *image = [UIImage imageWithData:data];
         
-        // 3.回到主线程更新UI
-        //        self.imageView.image = image;
-        /*
-         技巧:
-         如果想等UI更新完毕再执行后面的代码, 那么使用同步函数
+        // 3.回到主线程更新
+//        imageView.image = image;
+
+//         技巧:\
+         如果想等UI更新完毕再执行后面的代码, 那么使用同步函数\
          如果不想等UI更新完毕就需要执行后面的代码, 那么使用异步函数
-         */
-        
+         
         NSLog( @"thread:%@",[NSThread currentThread]);
         dispatch_sync(dispatch_get_main_queue(), ^{ // 会等block代码执行完毕后，执行后面最后一句的打印代码
             imgView.image = image;
-            NSLog( @"thread:%@",[NSThread currentThread]);
-            
+            NSLog( @"更新UI,thread:%@",[NSThread currentThread]);
         });
+        
+        
         NSLog(@"设置图片完毕 %@", image);
     });
 
@@ -314,12 +324,16 @@ GCD 将队列中的任务取出，并放置到对应的线程中执行。
         case kDelayTimer:
         {
             NSLog(@"start...");
-            [NSTimer scheduledTimerWithTimeInterval:3 repeats:NO block:^(NSTimer * _Nonnull timer) {
-                NSLog(@"welcome NSTimer delay");
-                NSLog(@"thread:%@",[NSThread currentThread]);
-
-
-            }];
+            if (@available(iOS 10.0, *)) {
+                [NSTimer scheduledTimerWithTimeInterval:3 repeats:NO block:^(NSTimer * _Nonnull timer) {
+                    NSLog(@"welcome NSTimer delay");
+                    NSLog(@"thread:%@",[NSThread currentThread]);
+                    
+                    
+                }];
+            } else {
+                // Fallback on earlier versions
+            }
         }
             
             break;
@@ -549,19 +563,19 @@ GCD 将队列中的任务取出，并放置到对应的线程中执行。
     
 }
 
-SingletonM(Med)
+SingletonM(GCD)
 
-+(instancetype)shareData
-{
-    static id data;
-    
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken,^{
-        data= [BNGCD new];
-    });
-    
-    return data;
-}
+//+(instancetype)shareData
+//{
+//    static id data;
+//
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken,^{
+//        data= [BNGCD new];
+//    });
+//
+//    return data;
+//}
 
 
 +(void)GCDTest
@@ -584,6 +598,11 @@ SingletonM(Med)
 
 @implementation BNBlock
 
+int a=10;
+void(^gBlock)(void)=^(){
+    NSLog(@"a:%d",a);
+};
+
 +(void)test
 {
     BNBlock *obj=[BNBlock new];
@@ -591,7 +610,10 @@ SingletonM(Med)
     __weak __typeof(obj) weakObj=obj;
     [obj setCompletion:^(id object) {
         weakObj.name=@"wbn";
+//        NSLog(@"complete:%@",obj.name);//Capturing 'obj' strongly in this block is likely to lead to a retain cycle
+        
         NSLog(@"complete:%@",weakObj.name);
+
         
 //        obj.name=@"wbn";
         NSLog(@"complete:%@",object);
@@ -603,36 +625,65 @@ SingletonM(Med)
     
 //    =======================
     
-    void (^block)(void)=^{};
-    obj.block1=^{};
-    
-    NSLog(@"block:%@\n%@",block,obj.block1);
-    NSLog(@"=====================================separator===============================================");
+   
 
+
+
+#pragma  mark - block作为参数
     NSMutableDictionary *dict=[NSMutableDictionary dictionary];
     dict[@"name"]=@"wbn";
     dict[@"age"]=@"20";
     dict[@"sex"]=@"man";
     
-    [self testBlock:dict success:^(id obj) {
-        NSLog(@"success:%@",obj);
+    [obj testBlock:dict success:^(id json) {
+        NSLog(@"success:%@",json);
+        obj.dict=json;   //block作为参数好像不用weak
         
     } failure:^(NSError *error) {
         NSLog(@"error:%ld:%@",error.code,error.domain);
         
     }];
     
-    NSLog(@"=====================================separator===============================================");
 
-    [self testBlock:@"123ddd" success:^(id obj) {
-        NSLog(@"success:%@",obj);
+    [obj testBlock:@"123ddd" success:^(id json) {
+        NSLog(@"success:%@",json);
         
     } failure:^(NSError *error) {
         NSLog(@"error:%ld:%@",error.code,error.domain);
         
     }];
     
+#pragma mark - block type
+
+//global block
+//不引用外部变量
+    void (^globalBlock)(void)=^(){
+        
+        NSLog(@"i'm a global block");
+    };
+    globalBlock();
     
+    
+    obj.ablock=^{};
+    NSLog(@"block1:%@\n%@",globalBlock,obj.ablock);    //block1:<__NSGlobalBlock__: 0x107d96ee0>\
+                                                    <__NSGlobalBlock__: 0x107d96f00>
+
+//    global block
+    gBlock();
+    NSLog(@"gBlock:%@",gBlock);
+    
+    
+    
+//malloc block
+    //和global的区别？？-->在blockd内引用变量，就变成了mallocBlock
+    int i = 1024;
+    void (^mallocBlock)(void) = ^(){
+//        printf("i=%d", i);//这里为什么无打印？
+        NSLog(@"i=%d", i);
+
+    };
+    mallocBlock();
+    NSLog(@"mallocBlock:%@", mallocBlock);       // block2:<__NSMallocBlock__: 0x60000189c5a0>
 
     
     
@@ -642,25 +693,18 @@ SingletonM(Med)
 {
     
     NSLog(@"%@释放了",self);
-    //ARC不能调用
-    //    [super dealloc];
 }
 
 
 
-+(void)testBlock:(id)object success:(void (^)(id obj))success failure:(void (^)(NSError *error))failure
+- (void)testBlock:(id)parameters success:(void (^)(id json))success failure:(void (^)(NSError *error))failure
 {
     
-    NSLog(@"s:%@",success);
-    
-    NSLog(@"f:%@\n%@",object,failure);
-    
-    if ([object isKindOfClass:[NSDictionary class]])
+    if ([parameters isKindOfClass:[NSDictionary class]])
     {
         if (success) {
-            //        NSLog(@"s:%@\n%@",str,success);
-            object[@"height"]=@"180";
-            success(object);
+            parameters[@"height"]=@"180";
+            success(parameters);
         }
 
     }

@@ -12,6 +12,9 @@
 #import "BNQuestion.h"
 #import "BNWebViewController.h"
 
+
+NSString * const BNNewQuestionDidAdded=@"com.bien.rich.objcReview";
+
 @interface BNQuestionsTableViewController ()
 
 @property(nonatomic,strong)NSArray *questionArray;
@@ -36,7 +39,7 @@
     [super viewDidLoad];
    
     [self refreshTableView];
-    [BNNotificationCenter addObserver:self selector:@selector(questionHasAdded) name:BNNewQuestionHasAdded object:nil];
+    [BNNotificationCenter addObserver:self selector:@selector(questionHasAdded) name:BNNewQuestionDidAdded object:nil];
 }
 
 

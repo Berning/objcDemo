@@ -6,11 +6,11 @@
 //  Copyright © 2019年 BN. All rights reserved.
 //
 
-#import "BNBaseTableController.h"
+#import "BNTableViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BNDataBaseController : BNBaseTableController
+@interface BNDataBaseController : BNTableViewController
 
 @end
 

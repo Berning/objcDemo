@@ -6,9 +6,9 @@
 //  Copyright © 2017年 BN. All rights reserved.
 //
 
-#import "BNBaseController.h"
+#import "BNViewController.h"
 
-@interface BNLotteryController :BNBaseController
+@interface BNLotteryController :BNViewController
 
 
 @end

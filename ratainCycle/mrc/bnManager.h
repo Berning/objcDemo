@@ -13,9 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface bnManager : NSObject
 
--(void)test;
 
-+(void)filterArr:(NSArray *)array;
+@property(nonatomic,copy)void (^option)(void);
+
+-(void)test;
 
 @end
 

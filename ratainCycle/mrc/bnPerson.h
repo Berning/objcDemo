@@ -15,8 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 @interface bnPerson : NSObject
 
-//delegate是可以用ratain的，只要在第三方中设置delegate就OK
-@property(nonatomic,strong,nullable)id<bnPersonDelegate> delegate;
+//必须为weak,strong需要dealloc 手动self.delegate=nil
+@property(nonatomic,weak,nullable)id<bnPersonDelegate> delegate;
 
 @end
 

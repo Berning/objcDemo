@@ -6,12 +6,11 @@
 //  Copyright © 2018年 BN. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "BNBaseTest.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BNPthread : NSObject
-+(void)pthreadTest;
+@interface BNPthread : BNBaseTest
 
 @end
 

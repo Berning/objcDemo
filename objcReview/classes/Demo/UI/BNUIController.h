@@ -6,9 +6,9 @@
 //  Copyright © 2018年 BN. All rights reserved.
 //
 
-#import "BNBaseTableController.h"
+#import "BNTableViewController.h"
 
-@interface BNUIController :BNBaseTableController
+@interface BNUIController :BNTableViewController
 
 
 @end

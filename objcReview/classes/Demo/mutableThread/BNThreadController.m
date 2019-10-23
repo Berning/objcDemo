@@ -34,25 +34,26 @@
 //    self.refreshControl=[[UIRefreshControl alloc] init];
 //    [self.refreshControl addTarget:self action:@selector(handleRefresh) forControlEvents:UIControlEventValueChanged];
 //    self.refreshControl.attributedTitle=[[NSAttributedString alloc] initWithString:@"下拉刷新数据..."];
-    self.refreshControl.tintColor=[UIColor redColor];
+//    self.refreshControl.tintColor=[UIColor redColor];
     [self.threads addObject:NSStringFromClass([BNPthread class])];
     [self.threads addObject:NSStringFromClass([BNThread class])];
     [self.threads addObject:NSStringFromClass([BNGCD class])];
     [self.threads addObject:NSStringFromClass([BNOpration class])];
+    [self.threads addObject:NSStringFromClass([BNBlock class])];
 
 }
 
-- (void)handleRefresh
-{
-    [self.threads addObject:NSStringFromClass([BNPthread class])];
-    [self.threads addObject:NSStringFromClass([BNThread class])];
-    [self.threads addObject:NSStringFromClass([BNGCD class])];
-    [self.threads addObject:NSStringFromClass([BNOpration class])];
-    [self.tableView reloadData];
-
-    [self.refreshControl endRefreshing];
-
-}
+//- (void)handleRefresh
+//{
+//    [self.threads addObject:NSStringFromClass([BNPthread class])];
+//    [self.threads addObject:NSStringFromClass([BNThread class])];
+//    [self.threads addObject:NSStringFromClass([BNGCD class])];
+//    [self.threads addObject:NSStringFromClass([BNOpration class])];
+//    [self.tableView reloadData];
+//
+//    [self.refreshControl endRefreshing];
+//
+//}
 
 #pragma mark - Table view data source
 
@@ -75,11 +76,12 @@
 }
 
 
-//- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
-//{
-//    NSLog(@"scrollViewDidEndDragging");
-//
-//    [self.refreshControl beginRefreshing];
-//}
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [super tableView:tableView didSelectRowAtIndexPath:indexPath];
+    
+    Class class=NSClassFromString(self.threads[indexPath.row]);
+    [class test];
+}
 @end

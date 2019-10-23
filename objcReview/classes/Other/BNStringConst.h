@@ -9,7 +9,6 @@
 #ifndef BNStringConst_h
 #define BNStringConst_h
 
-#define BNNewQuestionHasAdded  @"BNNewQuestionHasAdded"
 
 
 #endif /* BNStringConst_h */

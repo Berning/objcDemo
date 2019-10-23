@@ -7,14 +7,17 @@
 //
 #if !__has_feature(objc_arc)
 
+
 #import "bnMachine.h"
 
 @implementation bnMachine
 
 -(void)dealloc
 {
-    NSLog(@"bnMachine dealloc");
+    NSLog(@"pre:%@",[self class]);
     [super dealloc];
+    NSLog(@"suf:%@",[self class]);
+
 }
 @end
 

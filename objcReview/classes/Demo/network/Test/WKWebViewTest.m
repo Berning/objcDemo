@@ -10,4 +10,8 @@
 
 @implementation WKWebViewTest
 
++ (void)test
+{
+}
+
 @end

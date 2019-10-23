@@ -12,66 +12,115 @@
 
 + (void)test
 {
+    [self testNSUrlConnection];
+//    [self testNSUrlSession];
+}
 
-
-    NSURL *url=[NSURL URLWithString:@"https://www.baidu.com/"];
-
++ (void)testNSUrlSession
+{
+        NSDictionary *dic=@{
+                            @"username":@"lisi",
+                            @"password":@"li"
     
-    NSDictionary *dic=@{
-                        @"Q":@"qqqqq",
-                        @"T":@"ttttt",
-                        @"data":@{
-                                
-                                @"2019-08-28":@{
-                                        @"step":@11110,
-                                        @"sleep":@7,
-                                        @"sit":@3
-                                        },
-                                
-                                @"2019-08-29":@{
-                                        @"step":@20000,
-                                        @"sleep":@6.5,
-                                        @"sit":@2
-                                        }
-                                }
-                        };
+                            };
     
+        NSString  *urlString=@"http:/localhost/objc/login";
     
-    NSMutableDictionary *mutableDic=[dic mutableCopy];
-    [mutableDic setValue:@"bn" forKey:@"w"];
-    dic=mutableDic;
-    NSLog(@"dic:%@",dic);
-    
-    
-    AFHTTPRequestOperationManager *manager=[AFHTTPRequestOperationManager manager];
-    manager.responseSerializer=[AFHTTPResponseSerializer serializer];
-
-    [manager POST:@"https://www.baidu.com" parameters:dic constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
-        NSLog(@"constructingBodyWithBlock");
-    } success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"success");
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"failure");
+        AFHTTPSessionManager *manager=[AFHTTPSessionManager manager];
+    [manager GET:urlString parameters:dic success:^(NSURLSessionDataTask *task, id responseObject) {
+        
+        NSLog(@"%@",task.response);
+        NSLog(@"responseObject:%@",responseObject);
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"error:%@",error);
     }];
-    
-    
-//    AFHTTPRequestOperationManager *manager=[AFHTTPRequestOperationManager manager];
-//    [manager POST:@"https:www.baidu.com" parameters:dic success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//
-//        NSLog(@"success:%@",[[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding]);
-//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//
-//    }];
-    
-//    [manager GET:@"https://www.baidu.com" parameters:dic success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//
-//        NSLog(@"success:%@",[[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding]);
-//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//        NSLog(@"domain:%@ code:%ld",error.domain,(long)error.code);
-//
-//    }];
     
 
 }
+
++ (void)testNSUrlConnection
+{
+    
+        NSDictionary *dict=@{
+                            @"Q":@"qqqqq",
+                            @"T":@"ttttt",
+                            @"data":@{
+    
+                                    @"2019-08-28":@{
+                                            @"step":@11110,
+                                            @"sleep":@7,
+                                            @"sit":@3
+                                            },
+    
+                                    @"2019-08-29":@{
+                                            @"step":@20000,
+                                            @"sleep":@6.5,
+                                            @"sit":@2
+                                            }
+                                    }
+                            };
+    
+
+    [dict mutableCopy];
+    
+    //文件名要么不写后缀。要么写对。例如：html写成htm，服务器会返回404
+    
+    NSDictionary *dic=@{
+                        @"username":@"lisi",
+                        @"password":@"li"
+
+                        };
+    
+//    NSString  *urlString=@"http://localhost/objc/login";
+    NSString  *urlString=@"http://121.40.171.11/objc/login.php";
+
+    //        "Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.1.32 mod_perl/2.0.10 Perl/v5.16.3"
+//    "Apache/2.4.34 (Unix) PHP/7.1.23"
+
+    
+    AFHTTPRequestOperationManager *manager=[AFHTTPRequestOperationManager manager];
+    //请求html等文件
+//        manager.responseSerializer=[AFHTTPResponseSerializer serializer];
+    
+    
+//    [manager POST:urlString parameters:dic success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//
+//        NSLog(@"request:%@",operation.request);
+//        NSLog(@"response:%@",operation.response);
+//        NSLog(@"responseobject:%@",responseObject);
+//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//        NSLog(@"request:%@",operation.request);
+//
+//        NSLog(@"error:%@",error);
+//    }];
+    
+    
+    //    [manager POST:@"https://www.baidu.com" parameters:dic constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+    //        NSLog(@"constructingBodyWithBlock");
+    //    } success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    //        NSLog(@"success");
+    //    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    //        NSLog(@"failure");
+    //    }];
+    
+    
+        [manager GET:urlString parameters:dic success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            NSLog(@"request:%@",operation.request);
+            NSLog(@"timeoutInterval:%f",operation.request.timeoutInterval);
+
+            NSLog(@"response:%@",operation.response);
+            
+            NSLog(@"responseData:%@",operation.responseData);
+            NSLog(@"responseString:%@",operation.responseString);
+            
+            NSLog(@"responseObject:%@",responseObject);
+            
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            NSLog(@"error:%@",error);
+    
+        }];
+
+}
+
 
 @end

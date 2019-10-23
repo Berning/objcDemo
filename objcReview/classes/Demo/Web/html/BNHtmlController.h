@@ -7,11 +7,11 @@
 //
 
 
-#import "BNBaseTableController.h"
+#import "BNTableViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BNHtmlController : BNBaseTableController
+@interface BNHtmlController : BNTableViewController
 
 @end
 

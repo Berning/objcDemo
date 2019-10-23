@@ -6,11 +6,11 @@
 //  Copyright © 2019年 Bien. All rights reserved.
 //
 
-#import "BNBaseCollectionController.h"
+#import "BNCollectionViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BNFoundationController : BNBaseCollectionController
+@interface BNFoundationController : BNCollectionViewController
 
 @end
 

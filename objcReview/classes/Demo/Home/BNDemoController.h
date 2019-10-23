@@ -6,9 +6,9 @@
 //  Copyright © 2017年 BN. All rights reserved.
 //
 
-#import "BNBaseCollectionController.h"
+#import "BNCollectionViewController.h"
 
-@interface BNDemoController : BNBaseCollectionController
+@interface BNDemoController : BNCollectionViewController
 
 
 @end

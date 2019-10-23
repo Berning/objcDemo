@@ -13,6 +13,7 @@
 #import "BNQuestionSQLite.h"
 
 
+
 @interface BNQuestionsInputViewController ()<UITextViewDelegate>
 
 @property(nonatomic,weak)BNTextView *textView;
@@ -45,7 +46,7 @@
     
     [BNQuestionSQLite sqliteInsertRecord:question success:^(NSString *success) {
         
-        [BNNotificationCenter postNotificationName:BNNewQuestionHasAdded object:nil];
+        [BNNotificationCenter postNotificationName:BNNewQuestionDidAdded object:nil];
         
         alertController.message=success;
         UIAlertAction *alertAction=[UIAlertAction actionWithTitle:@"好" style:UIAlertActionStyleDefault handler:nil];

@@ -9,7 +9,7 @@
 #import "BNQuestionViewController.h"
 #import "BNQuestionsTableViewController.h"
 #import "BNAnswerViewController.h"
-#import "BNViewControllersSwitchComponent.h"
+#import "BNMenu.h"
 
 
 @interface BNQuestionViewController ()

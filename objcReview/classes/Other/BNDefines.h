@@ -77,12 +77,15 @@
 
 #define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
 
+#define iOS9 @available(iOS 9.0, *)
+
+
 #pragma mark -主线程
 #define bn_dispatch_main_async_safe(block)\
 if ([NSThread isMainThread]) {\
-block();\
+    block();\
 } else {\
-dispatch_async(dispatch_get_main_queue(), block);\
+    dispatch_async(dispatch_get_main_queue(), block);\
 }
 
 #define bn_dispatch_main_sync_safe(block)\
@@ -104,7 +107,7 @@ dispatch_sync(dispatch_get_main_queue(), block);\
 #define BNApplication          [UIApplication sharedApplication]
 #define BNAppDelegate          [BNApplication delegate]
 #define BNRootViewController   BNAppDelegate.window.rootViewController
-#define BNGetTabController      ((BNTabBarController *)QHRootViewController)
+#define BNTabController      ((BNTabBarController *)QHRootViewController)
 
 #pragma mark -字符串判断
 #define strIsEmpty(str) ([str isKindOfClass:[NSNull class]] || str == nil || ([str isKindOfClass:[NSString class]] && [str length]<1) ? YES : NO )

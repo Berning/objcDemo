@@ -172,8 +172,8 @@ void testParamsToKeyValues()
 
 void testBaseARC()
 {
-    testParamsToKeyValues();
-    testRequestHeaders();
+//    testParamsToKeyValues();
+//    testRequestHeaders();
 }
 
 #else
@@ -181,10 +181,12 @@ void testBaseARC()
 
 void testBaseMRC()
 {
-    [[bnManager new] test];
-
+    bnManager *mgr=[bnManager new];
+    [mgr test];
+    
+    [mgr release];
+    
 }
-
 
 #endif
 
@@ -194,6 +196,7 @@ int main(int argc, const char * argv[]) {
 #if !__has_feature(objc_arc)
         
         testBaseMRC();
+        
 #else
 
         testBaseARC();

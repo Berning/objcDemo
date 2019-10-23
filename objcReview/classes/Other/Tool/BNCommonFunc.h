@@ -11,15 +11,15 @@
 @interface BNCommonFunc : NSObject
 
 //返回除数，判断范围  93 -->0.093
-+(NSString*) getFormatNumStr:(float) num;
++(NSString *) getFormatNumStr:(float) num;
 
 
 //给定分钟，返回小时 ---93mins==1.55h
-+(NSString*) getFormatTimeStr:(float) min;
++(NSString *) getFormatTimeStr:(float) min;
 
 
 //给定分钟，返回小时分钟 ----93mins==1小时33分钟
-+(NSString*) getFormatTimeHourMinStr:(float) min;
++(NSString *) getFormatTimeHourMinStr:(float) min;
 
 
 @end

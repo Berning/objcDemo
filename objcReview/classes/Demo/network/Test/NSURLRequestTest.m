@@ -46,8 +46,15 @@
     request.HTTPMethod=@"post";
     request.HTTPBody=[NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
     
+    //setvalue 覆盖
+    //addValue 追加
     [request setValue:@"setValue" forHTTPHeaderField:@"setKey"];
+    [request addValue: @"set" forHTTPHeaderField:@"setkey"];
+    
     [request addValue:@"addValue" forHTTPHeaderField:@"addKey"];
+    [request setValue:@"add" forHTTPHeaderField:@"addkey"];
+    
+    
     
     NSLog(@"request:%@",request);
     NSLog(@"allHTTPHeaderFields:%@",request.allHTTPHeaderFields);

@@ -9,36 +9,36 @@
 static id _instace = nil; \
 + (id)allocWithZone:(struct _NSZone *)zone \
 { \
-if (_instace == nil) { \
-static dispatch_once_t onceToken; \
-dispatch_once(&onceToken, ^{ \
-_instace = [super allocWithZone:zone]; \
-}); \
+    if (_instace == nil) { \
+        static dispatch_once_t onceToken; \
+        dispatch_once(&onceToken, ^{ \
+        _instace = [super allocWithZone:zone]; \
+    }); \
 } \
-return _instace; \
+    return _instace; \
 } \
 \
 - (id)init \
 { \
-static dispatch_once_t onceToken; \
-dispatch_once(&onceToken, ^{ \
-_instace = [super init]; \
-}); \
-return _instace; \
+    static dispatch_once_t onceToken; \
+    dispatch_once(&onceToken, ^{ \
+        _instace = [super init]; \
+    }); \
+    return _instace; \
 } \
 \
 + (instancetype)shared##methodName \
 { \
-return [[self alloc] init]; \
+    return [[self alloc] init]; \
 } \
 + (id)copyWithZone:(struct _NSZone *)zone \
 { \
-return _instace; \
+    return _instace; \
 } \
 \
 + (id)mutableCopyWithZone:(struct _NSZone *)zone \
 { \
-return _instace; \
+    return _instace; \
 }
 
 
@@ -49,27 +49,27 @@ return _instace; \
 static id _instace = nil; \
 + (id)allocWithZone:(struct _NSZone *)zone \
 { \
-if (_instace == nil) { \
-static dispatch_once_t onceToken; \
-dispatch_once(&onceToken, ^{ \
-_instace = [super allocWithZone:zone]; \
-}); \
-} \
-return _instace; \
+    if (_instace == nil) { \
+        static dispatch_once_t onceToken; \
+        dispatch_once(&onceToken, ^{ \
+        _instace = [super allocWithZone:zone]; \
+        }); \
+    } \
+    return _instace; \
 } \
 \
 - (id)init \
 { \
-static dispatch_once_t onceToken; \
-dispatch_once(&onceToken, ^{ \
-_instace = [super init]; \
-}); \
-return _instace; \
+    static dispatch_once_t onceToken; \
+    dispatch_once(&onceToken, ^{ \
+        _instace = [super init]; \
+    }); \
+    return _instace; \
 } \
 \
 + (instancetype)shared##methodName \
 { \
-return [[self alloc] init]; \
+    return [[self alloc] init]; \
 } \
 \
 - (oneway void)release \
@@ -79,12 +79,12 @@ return [[self alloc] init]; \
 \
 - (id)retain \
 { \
-return self; \
+    return self; \
 } \
 \
 - (NSUInteger)retainCount \
 { \
-return 1; \
+    return 1; \
 } \
 + (id)copyWithZone:(struct _NSZone *)zone \
 { \

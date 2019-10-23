@@ -32,7 +32,7 @@
 
 //    AFSecurityPolicy
 //    AFNetworkReachabilityManager
-
+//只是了解框架，详细见CocoaPodsTest
 
 
 #import "BNBaseTest.h"

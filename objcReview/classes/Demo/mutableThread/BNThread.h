@@ -6,10 +6,9 @@
 //  Copyright © 2017年 BN. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "BNBaseTest.h"
 
-@interface BNThread : NSObject
+@interface BNThread : BNBaseTest
 
-@property(class,readonly)void test;
 
 @end

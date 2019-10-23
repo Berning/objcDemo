@@ -15,6 +15,7 @@
 
 //1.打开数据库，2.创表
 +(void)bnSQLiteInsertRecord:(BNRecord *)record success:(void(^)(NSString *))success failure:(void (^)(NSString *))failure;
+
 +(void)bnSQLiteRetrieveRecord:(void (^)(NSArray *))success failure:(void (^)(NSError *))failure;
 
 +(void)bnSQLiteDeleteRecord:(BNRecord *)record success:(void (^)(NSArray *))success failure:(void (^)(NSError *))failure;

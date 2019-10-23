@@ -9,7 +9,7 @@
 #import "BNQuesController.h"
 #import "BNQuestionsInputViewController.h"
 #import "BNQuestionViewController.h"
-#import "BNViewControllersSwitchComponent.h"
+#import "BNMenu.h"
 
 
 @interface BNQuesController ()
@@ -44,7 +44,7 @@
     [self addChildViewController:questionVC];
     
     
-    [BNViewControllersSwitchComponent controllersSwitchOnController:self superViewType:BNSuperViewTypeOnTitleView];
+    [BNMenu controllersSwitchOnController:self superViewType:BNSuperViewTypeOnTitleView];
 
 }
 

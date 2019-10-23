@@ -10,8 +10,8 @@
 #import "bnOpenSearchViewController.h"
 #import "BNRecord.h"
 #import "BNLotterySQLite.h"
-#import "BNTableViewController.h"
-#import "bnCollectionViewController.h"
+#import "BNRecordViewController.h"
+#import "BNRecordCollectionViewController.h"
 #import "NSMutableArray+Sort.h"
 
 @interface bnOperator ()
@@ -125,13 +125,13 @@
     
     [alertVC addAction:[UIAlertAction actionWithTitle:@"表格显示" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         
-        [navController presentViewController:[[UINavigationController alloc]initWithRootViewController:[BNTableViewController new]]
+        [navController presentViewController:[[UINavigationController alloc]initWithRootViewController:[BNRecordViewController new]]
                                    animated :YES completion:^{}] ;
         
     }]];
     
     [alertVC addAction:[UIAlertAction actionWithTitle:@"区块显示" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [navController pushViewController:[[bnCollectionViewController alloc]init] animated:YES];
+        [navController pushViewController:[[BNRecordCollectionViewController alloc]init] animated:YES];
     }]];
     
     [alertVC addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {

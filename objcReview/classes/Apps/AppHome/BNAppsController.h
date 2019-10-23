@@ -6,11 +6,11 @@
 //  Copyright © 2019年 BN. All rights reserved.
 //
 
-#import "BNBaseCollectionController.h"
+#import "BNCollectionViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BNAppsController : BNBaseCollectionController
+@interface BNAppsController : BNCollectionViewController
 
 @end
 

@@ -10,6 +10,17 @@
 #import "BNTabBarController.h"
 #import "BNTableViewManagerTest.h"
 
+#import <UserNotifications/UserNotifications.h>
+//推送
+//1.原生推送
+//2.JPush
+//3.UPush
+//4.百度推送
+
+@interface AppDelegate ()<UNUserNotificationCenterDelegate>
+
+@end
+
 @implementation AppDelegate
 
 
@@ -30,6 +41,9 @@
     [self.window makeKeyAndVisible];
 //    self.window.rootViewManager=[[BNNavigationManager alloc] initWithRootViewManager:[BNTableViewManagerTest new]];
 //    [self.window makeMainAndVisible];
+    
+    //push
+    [self applicationPushRegister:application];
     
     return YES;
 }
@@ -75,6 +89,56 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     NSLog(@"application--applicationWillTerminate");
 
+}
+
+#pragma mark - push
+
+- (void)applicationPushRegister:(UIApplication *)application
+{
+     
+    if (@available(iOS 10.0, *))
+    {
+        UNUserNotificationCenter * center = [UNUserNotificationCenter currentNotificationCenter];
+        
+        [center setDelegate:self];
+        
+        UNAuthorizationOptions type =   UNAuthorizationOptionBadge|UNAuthorizationOptionSound|UNAuthorizationOptionAlert;
+        
+        [center requestAuthorizationWithOptions:type completionHandler:^(BOOL granted, NSError *     _Nullable error) {
+            
+            if (granted) {
+                NSLog(@"注册成功");
+            }else{
+                NSLog(@"注册失败");
+            }
+        }];
+    
+    }else if(@available(iOS 8.0,*))
+    {
+     
+        UIUserNotificationType notificationTypes = UIUserNotificationTypeBadge |
+     
+        UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
+     
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:notificationTypes categories:nil];
+     
+        [application registerUserNotificationSettings:settings];
+     
+    }else{//ios8以下 app最低部署iOS8.0，所以不适合
+     
+//        UIRemoteNotificationType notificationTypes = UIRemoteNotificationTypeBadge |
+//
+//        UIRemoteNotificationTypeSound |
+//
+//        UIRemoteNotificationTypeAlert;
+//
+//        [[UIApplication sharedApplication]registerForRemoteNotificationTypes:notificationTypes];
+//
+    }
+     
+    // 注册获得device Token
+     
+    [application registerForRemoteNotifications];
 }
 
 

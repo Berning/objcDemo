@@ -10,6 +10,8 @@
 #define BNCategories_h
 
 #import "NSString+BN.h"
+#import "NSString+Security.h"
+
 #import "UIButton+BN.h"
 #import "UIImage+BN.h"
 #import "UILabel+BN.h"

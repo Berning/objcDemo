@@ -12,7 +12,23 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIColor (BN)
 
+
+/**
+ *  十六进制
+ *  请设置RGB
+ */
+
++ (UIColor *)colorWithRedH:(NSString *)rh greenH:(NSString *)gh blueH:(NSString *)bh alpha:(NSString *)alpha;
+
+/**
+ *  十六进制
+ *  透明度为1.0的RGB
+*/
++ (UIColor *)colorWithRedH:(NSString *)rh greenH:(NSString *)gh blueH:(NSString *)bh ;
+
 + (UIColor *)navigationBarColor;
+
+float HtoD(const char *s);
 
 //UIColor
 //+ (UIColor *)blackColor;      // 0.0 white

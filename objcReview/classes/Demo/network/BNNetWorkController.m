@@ -17,8 +17,20 @@ static NSString * const CellID=@"netWork";
 #import "NSURLSessionTest.h"
 #import "AFNetworkingTest.h"
 #import "Test/WKWebViewTest.h"
+#import "Test/json&xml/NSJsonSerialTest.h"
+#import "Test/json&xml/NSXmlParseTest.h"
+#import "BNDownLoadTest.h"
+#import "BNUploadPOSTTest.h"
+#import "BNUploadPUTTest.h"
+
+#import "WKWebViewController.h"
+#import "parseController/BNJsonSerialController.h"
+#import "parseController/BNXmlParseController.h"
+
+
 
 @interface BNNetWorkController ()
+
 @property(nonatomic,strong)NSMutableArray *netWorks;
 
 @end
@@ -35,8 +47,14 @@ static NSString * const CellID=@"netWork";
         [_netWorks addObject:NSStringFromClass([NSURLConnectionTest class])];
         [_netWorks addObject:NSStringFromClass([NSURLSessionTest class])];
         [_netWorks addObject:NSStringFromClass([AFNetworkingTest class])];
-        [_netWorks addObject: NSStringFromClass([WKWebViewTest class])];
+        [_netWorks addObject:NSStringFromClass([WKWebViewTest class])];
+        [_netWorks addObject:NSStringFromClass([NSJsonSerialTest class])];
+        [_netWorks addObject:NSStringFromClass([NSXmlParseTest class])];
+        [_netWorks addObject:NSStringFromClass([BNDownLoadTest class])];
+        [_netWorks addObject:NSStringFromClass([BNUploadPOSTTest class])];
+        [_netWorks addObject:NSStringFromClass([BNUploadPUTTest class])];
 
+        
     }
     return _netWorks;
 }
@@ -68,7 +86,26 @@ static NSString * const CellID=@"netWork";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     Class class=NSClassFromString(self.netWorks[indexPath.item]);
-    [class test];
+    
+    
+    if ([self.netWorks[indexPath.item] isEqualToString:NSStringFromClass([WKWebViewTest class])]) {
+        [self.navigationController pushViewController:[WKWebViewController new] animated:YES];
+    }
+    else if([self.netWorks[indexPath.item] isEqualToString:NSStringFromClass([NSJsonSerialTest class])])
+    {
+        [self.navigationController pushViewController:[BNJsonSerialController new] animated:YES];
+
+    }
+    else if([self.netWorks[indexPath.item] isEqualToString:NSStringFromClass([NSXmlParseTest class])])
+    {
+        [self.navigationController pushViewController:[BNXmlParseController new] animated:YES];
+
+    }
+        
+    else
+    {
+        [class test];
+    }
 }
 
 @end

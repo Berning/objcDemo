@@ -443,11 +443,13 @@ static inline BOOL AFStateTransitionIsValid(AFOperationState fromState, AFOperat
     return self.state == AFOperationFinishedState;
 }
 
-- (BOOL)isConcurrent {
+- (BOOL)isConcurrent
+{
     return YES;
 }
 
-- (void)start {
+- (void)start
+{
     [self.lock lock];
     if ([self isCancelled]) {
         [self performSelector:@selector(cancelConnection) onThread:[[self class] networkRequestThread] withObject:nil waitUntilDone:NO modes:[self.runLoopModes allObjects]];
@@ -460,7 +462,7 @@ static inline BOOL AFStateTransitionIsValid(AFOperationState fromState, AFOperat
 }
 
 #pragma mark -类扩展方法
-//自定义方法
+//请求操作是否开始
 - (void)operationDidStart {
     [self.lock lock];
     if (![self isCancelled]) {
@@ -481,7 +483,7 @@ static inline BOOL AFStateTransitionIsValid(AFOperationState fromState, AFOperat
     });
 }
 
-//自己方法
+//请求操作完成
 - (void)finish {
     [self.lock lock];
     self.state = AFOperationFinishedState;
@@ -504,7 +506,8 @@ static inline BOOL AFStateTransitionIsValid(AFOperationState fromState, AFOperat
     }
     [self.lock unlock];
 }
-//自己方法
+
+//取消连接
 - (void)cancelConnection {
     NSDictionary *userInfo = nil;
     if ([self.request URL]) {
@@ -524,7 +527,7 @@ static inline BOOL AFStateTransitionIsValid(AFOperationState fromState, AFOperat
     }
 }
 
-#pragma mark -
+#pragma mark -没有被调用
 
 + (NSArray *)batchOfRequestOperations:(NSArray *)operations
                         progressBlock:(void (^)(NSUInteger numberOfFinishedOperations, NSUInteger totalNumberOfOperations))progressBlock
@@ -640,7 +643,7 @@ willSendRequestForAuthenticationChallenge:(NSURLAuthenticationChallenge *)challe
     [self finish];
 }
 
-//NSURLConnectionDataDelegate
+#pragma mark - NSURLConnectionDataDelegate
 - (NSURLRequest *)connection:(NSURLConnection *)connection
              willSendRequest:(NSURLRequest *)request
             redirectResponse:(NSURLResponse *)redirectResponse
@@ -682,9 +685,11 @@ didReceiveResponse:(NSURLResponse *)response
             const uint8_t *dataBuffer = (uint8_t *)[data bytes];
 
             NSInteger numberOfBytesWritten = 0;
-            while (totalNumberOfBytesWritten < (NSInteger)length) {
+            while (totalNumberOfBytesWritten < (NSInteger)length)
+            {
                 numberOfBytesWritten = [self.outputStream write:&dataBuffer[(NSUInteger)totalNumberOfBytesWritten] maxLength:(length - (NSUInteger)totalNumberOfBytesWritten)];
-                if (numberOfBytesWritten == -1) {
+                if (numberOfBytesWritten == -1)
+                {
                     break;
                 }
                 
@@ -694,7 +699,8 @@ didReceiveResponse:(NSURLResponse *)response
             break;
         }
         
-        if (self.outputStream.streamError) {
+        if (self.outputStream.streamError)
+        {
             [self.connection cancel];
             [self performSelector:@selector(connection:didFailWithError:) withObject:self.connection withObject:self.outputStream.streamError];
             return;
@@ -704,13 +710,16 @@ didReceiveResponse:(NSURLResponse *)response
     dispatch_async(dispatch_get_main_queue(), ^{
         self.totalBytesRead += (long long)length;
 
-        if (self.downloadProgress) {
+        if (self.downloadProgress)
+        {
             self.downloadProgress(length, self.totalBytesRead, self.response.expectedContentLength);
         }
     });
 }
 
-- (void)connectionDidFinishLoading:(NSURLConnection __unused *)connection {
+
+- (void)connectionDidFinishLoading:(NSURLConnection __unused *)connection
+{
     self.responseData = [self.outputStream propertyForKey:NSStreamDataWrittenToMemoryStreamKey];
 
     [self.outputStream close];

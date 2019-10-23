@@ -9,6 +9,12 @@
 #import "BNPthread.h"
 
 @implementation BNPthread
+
++ (void)test
+{
+    
+}
+
 #ifdef _GNU_SOURCE
 
 void *operate(void *param) {

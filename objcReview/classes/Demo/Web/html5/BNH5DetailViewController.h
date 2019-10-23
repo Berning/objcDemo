@@ -6,11 +6,11 @@
 //  Copyright © 2019年 Bien. All rights reserved.
 //
 
-#import "BNBaseController.h"
+#import "BNViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BNH5DetailViewController : BNBaseController
+@interface BNH5DetailViewController : BNViewController
 
 @end
 
